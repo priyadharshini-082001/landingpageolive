@@ -1,0 +1,2657 @@
+
+/* =====================================================
+   OLIVE TREE GROUP OF SCHOOLS
+   PREMIUM RESPONSIVE DESIGN
+   Bright Dark Green + Rich Dark Brown + Gold + Ivory
+===================================================== */
+
+/* ================= GLOBAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    width: 100%;
+    overflow-x: clip;
+    background: #ffffff;
+    color: #183d28;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+    overflow-wrap: anywhere;
+}
+
+h1, h2, h3, h4 {
+    overflow-wrap: anywhere;
+}
+
+a:focus-visible {
+    outline: 3px solid #cda84f;
+    outline-offset: 4px;
+}
+
+.ot-topbar,
+.ot-main-header,
+.ot-announcement,
+.ot-hero,
+.ot-institutions,
+.ot-featured-section,
+.ot-footer {
+    width: 100%;
+    min-width: 0;
+}
+
+.ot-topbar-inner,
+.ot-header-inner,
+.ot-hero-inner,
+.ot-institution-grid,
+.ot-featured-inner,
+.ot-footer-inner {
+    width: min(1400px, 92%);
+    margin-inline: auto;
+}
+
+/* ================= TOP CONTACT BAR ================= */
+
+.ot-topbar {
+    position: relative;
+    z-index: 20;
+    color: #ffffff;
+    background: #173f27;
+    border-bottom: 1px solid #c9a653;
+}
+
+.ot-topbar-inner {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-block: 6px;
+}
+
+.ot-topbar-info,
+.ot-topbar-right,
+.ot-topbar-social {
+    display: flex;
+    align-items: center;
+}
+
+.ot-topbar-info {
+    flex-wrap: wrap;
+    gap: 10px 25px;
+}
+
+.ot-topbar-info a {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.ot-topbar-info a i {
+    color: #f0cd70;
+}
+
+.ot-topbar-info a:hover {
+    color: #f3d68c;
+}
+
+.ot-topbar-right {
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.ot-topbar-message {
+    color: #f4dfab;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.ot-topbar-social {
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.ot-topbar-social a {
+    width: 29px;
+    height: 29px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(244,215,145,0.4);
+    border-radius: 50%;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.ot-topbar-social a:hover {
+    color: #173f27;
+    background: #f0ce79;
+    border-color: #f0ce79;
+}
+
+/* ================= PREMIUM MAIN HEADER ================= */
+
+.ot-main-header {
+    position: relative;
+    z-index: 15;
+    background: #f5fff5;
+    border-bottom: 4px solid #b18b3f;
+}
+
+.ot-main-header::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7px;
+    background: #24613a;
+}
+
+.ot-header-inner {
+    min-height: 150px;
+    display: grid;
+    grid-template-columns: minmax(150px, 0.85fr) minmax(0, 1.65fr) minmax(245px, 1fr);
+    align-items: center;
+    gap: 26px;
+    padding-block: 17px;
+}
+
+/* Group logo */
+
+.ot-main-logo {
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ot-logo-frame {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    background: #ffffff;
+    border: 1px solid #d6bd80;
+    border-radius: 12px 3px 12px 3px;
+    outline: 1px solid #e9ddbd;
+    outline-offset: 3px;
+}
+
+.ot-logo-frame img {
+    width: 100%;
+    max-height: 112px;
+    object-fit: contain;
+}
+
+/* Brand name */
+
+.ot-header-brand {
+    min-width: 0;
+    text-align: center;
+}
+
+.ot-header-overline {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #85512e;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+    line-height: 1.6;
+}
+
+.ot-header-brand h2 {
+    color: #17512f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(24px, 2.4vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: 0.6px;
+}
+
+.ot-header-brand h2 span {
+    display: block;
+    margin-top: 5px;
+    color: #704326;
+    font-size: 0.67em;
+    letter-spacing: 2.4px;
+}
+
+.ot-header-brand > p {
+    margin-top: 6px;
+    color: #000000;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.ot-header-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+    color: #98732f;
+    font-size: 14px;
+}
+
+.ot-header-ornament span {
+    width: 37px;
+    height: 2px;
+    background: #c5a354;
+}
+
+/* Admissions button */
+
+.ot-admission-button {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 91px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    color: #ffffff;
+    background: linear-gradient(125deg, #28683e, #164126);
+    border: 1px solid #d4b15d;
+    border-radius: 4px 16px 4px 16px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ot-admission-button:hover {
+    background: linear-gradient(125deg, #347b49, #205632);
+    transform: translateY(-3px);
+}
+
+.ot-admission-symbol {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    display: grid;
+    place-items: center;
+    color: #1a4b2c;
+    background: #f0d486;
+    border-radius: 10px 3px 10px 3px;
+    font-size: 21px;
+}
+
+.ot-admission-details {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.ot-admission-details small {
+    color: #ffe6a7;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.ot-admission-details strong {
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.35;
+}
+
+.ot-admission-details > span {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ot-admission-arrow {
+    flex: 0 0 auto;
+    color: #f3d78d;
+    font-size: 15px;
+}
+
+/* ================= ANNOUNCEMENT MARQUEE ================= */
+
+.ot-announcement {
+    position: relative;
+    z-index: 10;
+    min-height: 49px;
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border-bottom: 1px solid #d9c69a;
+}
+
+.ot-announcement-label {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 21px;
+    color: #ffffff;
+    background: #704326;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+}
+
+.ot-announcement-icon {
+    color: #ffdc80;
+    font-size: 17px;
+}
+
+.ot-announcement-window {
+    min-width: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.ot-announcement-track {
+    width: max-content;
+    flex: 0 0 auto;
+    display: flex;
+    animation: ot-marquee 34s linear infinite;
+}
+
+.ot-announcement:hover .ot-announcement-track {
+    animation-play-state: paused;
+}
+
+.ot-announcement-group {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.ot-announcement-group > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 25px;
+    color: #174b2d;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.ot-announcement-group > span i {
+    color: #96652e;
+}
+
+.ot-marquee-cta {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 0 19px;
+    color: #ffffff;
+    background: #216039;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+.ot-marquee-cta:hover {
+    background: #704326;
+}
+
+@keyframes ot-marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ================= HERO SECTION ================= */
+
+.ot-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 78px 0 88px;
+    background:
+        radial-gradient(ellipse at 90% 10%, rgba(206,177,107,0.2), transparent 35%),
+        radial-gradient(ellipse at 5% 90%, rgba(95,147,89,0.12), transparent 35%),
+        linear-gradient(130deg, #fffdf7, #f5f1e5 55%, #ffffff);
+}
+
+.ot-hero::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    content: "";
+    opacity: 0.18;
+    background-image: radial-gradient(#73916b 0.8px, transparent 0.8px);
+    background-size: 22px 22px;
+    pointer-events: none;
+}
+
+.ot-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(32px, 5vw, 70px);
+}
+
+.ot-hero-content {
+    min-width: 0;
+}
+
+.ot-hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 22px;
+    color: #754729;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.ot-eyebrow-line {
+    width: 27px;
+    height: 2px;
+    flex: 0 0 auto;
+    background: #bd9646;
+}
+
+.ot-hero-content h1 {
+    max-width: 700px;
+    color: #17472b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4.4vw, 50px);
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: -1px;
+}
+
+.ot-hero-content h1 span {
+    display: block;
+    margin-top: 7px;
+    color: #7a4828;
+    font-style: italic;
+}
+
+.ot-hero-content > p {
+    max-width: 620px;
+    margin-top: 23px;
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.ot-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 13px;
+    margin-top: 29px;
+}
+
+.ot-btn-primary,
+.ot-btn-outline {
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 21px;
+    border-radius: 3px 12px 3px 12px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.ot-btn-primary {
+    color: #ffffff;
+    background: #216039;
+    border: 1px solid #216039;
+}
+
+.ot-btn-primary:hover {
+    background: #704326;
+    border-color: #704326;
+    transform: translateY(-3px);
+}
+
+.ot-btn-outline {
+    color: #194c2e;
+    background: #ffffff;
+    border: 1px solid #b8954d;
+}
+
+.ot-btn-outline:hover {
+    color: #ffffff;
+    background: #704326;
+    border-color: #704326;
+    transform: translateY(-3px);
+}
+
+.ot-hero-signature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 34px;
+    padding-top: 22px;
+    border-top: 1px solid #ddcfad;
+}
+
+.ot-signature-icon {
+    width: 45px;
+    height: 45px;
+    flex: 0 0 45px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #704326;
+    border-radius: 50% 50% 5px 50%;
+    font-size: 19px;
+}
+
+.ot-hero-signature strong,
+.ot-hero-signature small {
+    display: block;
+}
+
+.ot-hero-signature strong {
+    color: #18502f;
+    font-size: 15px;
+}
+
+.ot-hero-signature small {
+    color: #704326;
+    font-size: 13px;
+}
+
+.ot-hero-decoration {
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(165,129,55,0.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.ot-hero-decoration-one {
+    top: 5%;
+    right: -100px;
+    width: 270px;
+    height: 270px;
+}
+
+.ot-hero-decoration-two {
+    top: 10%;
+    right: -55px;
+    width: 180px;
+    height: 180px;
+}
+
+.ot-hero-decoration-three {
+    bottom: -130px;
+    left: 38%;
+    width: 270px;
+    height: 270px;
+}
+
+/* ================= HERO IMAGE COLLAGE ================= */
+
+.ot-hero-visual {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    max-width: 590px;
+    min-width: 0;
+    height: 490px;
+    margin-inline: auto;
+}
+
+.ot-hero-image-frame {
+    position: absolute;
+    z-index: -1;
+    inset: 20px 12px 23px 23px;
+    border: 2px solid #b99850;
+    border-radius: 155px 12px 140px 12px;
+    transform: rotate(2deg);
+}
+
+.ot-hero-image-collage {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    grid-template-rows: 1fr 0.83fr;
+    gap: 13px;
+    padding: 11px;
+}
+
+.ot-hero-photo {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #e7e0cd;
+    border: 4px solid #ffffff;
+    outline: 1px solid #d9c69a;
+}
+
+.ot-hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ot-hero-photo:hover img {
+    transform: scale(1.05);
+}
+
+.ot-hero-photo-main {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    border-radius: 115px 5px 5px 5px;
+}
+
+.ot-hero-photo-top {
+    grid-column: 2;
+    grid-row: 1;
+    border-radius: 5px 65px 5px 5px;
+}
+
+.ot-hero-photo-bottom {
+    grid-column: 2;
+    grid-row: 2;
+    border-radius: 5px 5px 65px 5px;
+}
+
+.ot-photo-caption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 16px 12px;
+    color: #ffffff;
+    background: linear-gradient(transparent, rgba(14,49,27,0.96));
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.ot-photo-caption i {
+    color: #f2d27b;
+    font-size: 17px;
+}
+
+.ot-hero-image-label {
+    position: absolute;
+    right: -12px;
+    bottom: 12px;
+    max-width: 280px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #d9c69a;
+    border-left: 4px solid #216039;
+    border-radius: 3px 12px 3px 12px;
+}
+
+.ot-image-label-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #704326;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.ot-hero-image-label strong,
+.ot-hero-image-label small {
+    display: block;
+}
+
+.ot-hero-image-label strong {
+    color: #17472b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.ot-hero-image-label small {
+    color: #000000;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.ot-hero-round-seal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 82px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    background: #216039;
+    border: 3px solid #f0d181;
+    outline: 2px solid #216039;
+    outline-offset: 3px;
+    border-radius: 50%;
+    transform: rotate(7deg);
+}
+
+.ot-hero-round-seal i {
+    color: #f2d78b;
+    font-size: 18px;
+}
+
+.ot-hero-round-seal span {
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.ot-hero-bottom-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: repeating-linear-gradient(
+        135deg,
+        #216039 0,
+        #216039 14px,
+        #c6a452 14px,
+        #c6a452 20px,
+        #f6f0df 20px,
+        #f6f0df 28px
+    );
+}
+
+/* ================= SECTION HEADING ================= */
+
+.ot-institutions {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0 92px;
+    background: #ffffff;
+}
+
+.ot-section-heading {
+    width: min(850px, 92%);
+    margin: 0 auto 43px;
+    text-align: center;
+}
+
+.ot-section-overline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 12px;
+    color: #704326;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.ot-section-overline i {
+    color: #216039;
+}
+
+.ot-section-heading h2 {
+    color: #17512f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.4vw, 46px);
+    line-height: 1.3;
+}
+
+.ot-section-heading h2 span {
+    color: #7a4828;
+    font-style: italic;
+}
+
+.ot-section-heading > p {
+    margin-top: 12px;
+    color: #000000;
+    font-size: 17px;
+    text-align: center;
+}
+
+.ot-heading-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 19px;
+    color: #a67f36;
+}
+
+.ot-heading-ornament span {
+    width: 52px;
+    height: 2px;
+    background: #c6a452;
+}
+
+/* ================= SCHOOL CARDS ================= */
+
+.ot-institution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+}
+
+.ot-school-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 23px 22px 26px;
+    background: #fffdf7;
+    border: 1px solid #e1d4b6;
+    border-radius: 4px 20px 4px 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.ot-school-card::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    content: "";
+    background: #216039;
+}
+
+.ot-school-card-two::before {
+    background: #8b542d;
+}
+
+.ot-school-card-three::before {
+    background: #64833d;
+}
+
+.ot-school-card:hover {
+    transform: translateY(-6px);
+    border-color: #bd9b52;
+}
+
+.ot-school-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ot-school-number {
+    color: #8c682e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.ot-school-category {
+    max-width: 78%;
+    padding: 5px 9px;
+    color: #174d2d;
+    background: #e4efdf;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.ot-school-card-two .ot-school-category {
+    color: #704326;
+    background: #f1e4d6;
+}
+
+.ot-school-logo {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0 19px;
+    padding: 13px;
+    background: #ffffff;
+    border: 1px solid #e7ddc6;
+    border-radius: 3px 14px 3px 14px;
+}
+
+.ot-school-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.ot-school-card:hover .ot-school-logo img {
+    transform: scale(1.035);
+}
+
+.ot-school-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ot-school-mini-heading {
+    color: #80552e;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    line-height: 1.7;
+}
+
+.ot-school-card-content h3 {
+    margin-top: 9px;
+    color: #17512f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.ot-school-card-content p {
+    margin-top: 11px;
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.ot-school-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: auto;
+    padding-top: 22px;
+    color: #17512f;
+    font-size: 14px;
+    font-weight: 800;
+    transition: color 0.3s ease, gap 0.3s ease;
+}
+
+.ot-school-link i {
+    color: #93602d;
+}
+
+.ot-school-link:hover {
+    gap: 17px;
+    color: #8a4f28;
+}
+
+.ot-school-card-decoration {
+    position: absolute;
+    right: -15px;
+    bottom: 7px;
+    z-index: -1;
+    color: rgba(32,95,53,0.06);
+    font-size: 105px;
+    transform: rotate(-18deg);
+    pointer-events: none;
+}
+
+/* ================= FEATURED VIDEO SECTION ================= */
+
+.ot-featured-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 80px 0;
+    background:
+        radial-gradient(ellipse at 5% 10%, rgba(202,172,102,0.18), transparent 35%),
+        linear-gradient(130deg, #f2eedf, #fffdf7 55%, #eaf0e4);
+}
+
+.ot-featured-background-pattern {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.2;
+    background-image: radial-gradient(#8d9c76 0.8px, transparent 0.8px);
+    background-size: 23px 23px;
+    pointer-events: none;
+}
+
+.ot-featured-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.03fr) minmax(0, 0.97fr);
+    align-items: center;
+    gap: 52px;
+}
+
+.ot-video-column,
+.ot-featured-content {
+    min-width: 0;
+}
+
+.ot-video-topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.ot-video-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #17512f;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.ot-video-label i {
+    color: #b42323;
+    font-size: 22px;
+}
+
+.ot-video-live-dot {
+    width: 10px;
+    height: 10px;
+    flex: 0 0 10px;
+    background: #c49a42;
+    border-radius: 50%;
+    outline: 4px solid rgba(196,154,66,0.2);
+}
+
+.ot-video-frame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #173f27;
+    border: 5px solid #ffffff;
+    outline: 1px solid #c6a452;
+    border-radius: 4px 18px 4px 18px;
+}
+
+.ot-video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.ot-video-caption {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 18px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px solid #e0d4b9;
+    border-left: 4px solid #216039;
+}
+
+.ot-video-caption-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #704326;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.ot-video-caption strong,
+.ot-video-caption small {
+    display: block;
+}
+
+.ot-video-caption strong {
+    color: #17512f;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.ot-video-caption small {
+    color: #000000;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ot-featured-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 14px;
+    color: #704326;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.ot-featured-eyebrow i {
+    color: #ad812f;
+    font-size: 17px;
+}
+
+.ot-featured-content h2 {
+    color: #17512f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 3.2vw, 45px);
+    line-height: 1.3;
+}
+
+.ot-featured-content h2 span {
+    display: block;
+    color: #7a4828;
+    font-style: italic;
+}
+
+.ot-featured-intro {
+    margin-top: 17px;
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.85;
+    text-align: justify;
+}
+
+.ot-highlight-list {
+    display: grid;
+    gap: 17px;
+    margin-top: 26px;
+}
+
+.ot-highlight-item {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+}
+
+.ot-highlight-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    background: #216039;
+    border-radius: 3px 12px 3px 12px;
+    font-size: 20px;
+}
+
+.ot-highlight-item:nth-child(2) .ot-highlight-icon {
+    background: #80502f;
+}
+
+.ot-highlight-item:nth-child(3) .ot-highlight-icon {
+    background: #59783a;
+}
+
+.ot-highlight-item h3 {
+    margin-bottom: 3px;
+    color: #17512f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.5;
+}
+
+.ot-highlight-item p {
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.ot-featured-cta {
+    min-height: 51px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    margin-top: 28px;
+    padding: 12px 21px;
+    color: #ffffff;
+    background: #216039;
+    border: 1px solid #216039;
+    border-radius: 3px 12px 3px 12px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.ot-featured-cta:hover {
+    background: #704326;
+    border-color: #704326;
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER ================= */
+
+.ot-footer {
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    background:
+        radial-gradient(ellipse at 80% 0%, rgba(92,135,72,0.2), transparent 35%),
+        #153c25;
+}
+
+.ot-footer-top-pattern {
+    height: 7px;
+    background: repeating-linear-gradient(
+        135deg,
+        #d7b75f 0,
+        #d7b75f 14px,
+        #704326 14px,
+        #704326 20px,
+        #216039 20px,
+        #216039 28px
+    );
+}
+
+.ot-footer-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr) minmax(0, 1fr);
+    gap: 48px;
+    padding: 60px 0 48px;
+}
+
+.ot-footer-brand,
+.ot-footer-links,
+.ot-footer-contact {
+    min-width: 0;
+}
+
+.ot-footer-logo {
+    max-width: 240px;
+    min-height: 88px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    background: #ffffff;
+    border: 1px solid #d8b96c;
+    border-radius: 4px 13px 4px 13px;
+}
+
+.ot-footer-logo img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.ot-footer-brand h3 {
+    margin-top: 20px;
+    color: #f2d687;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.ot-footer-brand > p {
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.ot-footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.ot-footer-social a {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    color: #ffe5a4;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(229,201,132,0.5);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.ot-footer-social a:hover {
+    color: #173f27;
+    background: #f0cf7c;
+    border-color: #f0cf7c;
+}
+
+.ot-footer-links h3,
+.ot-footer-contact h3 {
+    position: relative;
+    margin-bottom: 23px;
+    padding-bottom: 13px;
+    color: #f4d98f;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.ot-footer-links h3::after,
+.ot-footer-contact h3::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 2px;
+    content: "";
+    background: #d1ae58;
+}
+
+.ot-footer-links > a {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 12px 0;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.ot-footer-links > a i {
+    flex: 0 0 auto;
+    margin-top: 7px;
+    color: #edcd7a;
+}
+
+.ot-footer-links > a:hover {
+    color: #f4d98f;
+}
+
+.ot-footer-contact > p,
+.ot-footer-contact > a:not(.ot-footer-admission) {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 17px;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.ot-contact-icon {
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+    display: grid;
+    place-items: center;
+    color: #f4d98f;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(229,201,132,0.3);
+    border-radius: 3px 10px 3px 10px;
+}
+
+.ot-footer-contact > a:not(.ot-footer-admission):hover {
+    color: #f4d98f;
+}
+
+.ot-footer-admission {
+    min-height: 47px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 7px;
+    padding: 11px 18px;
+    color: #173f27;
+    background: #f0cf7c;
+    border: 1px solid #f0cf7c;
+    border-radius: 3px 12px 3px 12px;
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.3s ease;
+}
+
+.ot-footer-admission:hover {
+    color: #ffffff;
+    background: #704326;
+    border-color: #e0c177;
+}
+
+.ot-footer-bottom {
+    position: relative;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    padding: 17px max(4%, calc((100% - 1400px) / 2));
+    background: #102f1d;
+    border-top: 1px solid rgba(229,201,132,0.25);
+}
+
+.ot-footer-bottom p {
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.ot-footer-motto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ot-footer-motto i {
+    color: #f0cf7c;
+}
+
+.ot-back-top {
+    width: 39px;
+    height: 39px;
+    flex: 0 0 39px;
+    display: grid;
+    place-items: center;
+    color: #173f27;
+    background: #f0cf7c;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.ot-back-top:hover {
+    color: #ffffff;
+    background: #80502f;
+}
+
+/* =====================================================
+   TABLET VIEW: 769px–991px
+===================================================== */
+
+@media (max-width: 991px) {
+    .ot-topbar-inner,
+    .ot-header-inner,
+    .ot-hero-inner,
+    .ot-institution-grid,
+    .ot-featured-inner,
+    .ot-footer-inner {
+        width: 94%;
+    }
+
+    .ot-header-inner {
+        grid-template-columns: minmax(130px, 0.75fr) minmax(0, 1.5fr) minmax(210px, 1fr);
+        gap: 15px;
+        min-height: 125px;
+    }
+
+    .ot-logo-frame {
+        min-height: 78px;
+        padding: 6px;
+    }
+
+    .ot-header-overline {
+        font-size: 12px;
+        letter-spacing: 1.2px;
+    }
+
+    .ot-header-brand h2 {
+        font-size: 25px;
+    }
+
+    .ot-header-brand h2 span {
+        font-size: 0.64em;
+        letter-spacing: 1px;
+    }
+
+    .ot-header-brand > p {
+        font-size: 12px;
+    }
+
+    .ot-admission-button {
+        min-height: 78px;
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .ot-admission-symbol {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+        font-size: 17px;
+    }
+
+    .ot-admission-details small {
+        font-size: 8px;
+    }
+
+    .ot-admission-details strong {
+        font-size: 16px;
+    }
+
+    .ot-admission-details > span {
+        font-size: 10px;
+    }
+
+    .ot-admission-arrow {
+        display: none;
+    }
+
+    .ot-announcement-label {
+        padding-inline: 13px;
+        font-size: 10px;
+    }
+
+    .ot-announcement-group > span {
+        padding-inline: 17px;
+        font-size: 12px;
+    }
+
+    .ot-marquee-cta {
+        padding-inline: 12px;
+        font-size: 11px;
+    }
+
+    .ot-hero {
+        padding: 57px 0 70px;
+    }
+
+    .ot-hero-inner {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+        gap: 26px;
+    }
+
+    .ot-hero-content h1 {
+        font-size: clamp(35px, 4.6vw, 46px);
+    }
+
+    .ot-hero-content > p {
+        font-size: 17px;
+    }
+
+    .ot-hero-eyebrow {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .ot-hero-visual {
+        height: 375px;
+    }
+
+    .ot-hero-image-label {
+        right: -2px;
+        bottom: 5px;
+        max-width: 225px;
+        gap: 8px;
+        padding: 9px;
+    }
+
+    .ot-image-label-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+    }
+
+    .ot-hero-image-label strong {
+        font-size: 11px;
+    }
+
+    .ot-hero-image-label small {
+        font-size: 10px;
+    }
+
+    .ot-hero-round-seal {
+        width: 68px;
+        height: 68px;
+    }
+
+    .ot-institution-grid {
+        gap: 15px;
+    }
+
+    .ot-school-card {
+        padding: 17px 14px 22px;
+    }
+
+    .ot-school-logo {
+        height: 115px;
+    }
+
+    .ot-school-card-content h3 {
+        font-size: 20px;
+    }
+
+    .ot-school-card-content p {
+        font-size: 16px;
+    }
+
+    .ot-school-mini-heading {
+        font-size: 9px;
+    }
+
+    .ot-school-category {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .ot-featured-inner {
+        gap: 28px;
+    }
+
+    .ot-featured-content h2 {
+        font-size:28px;
+    }
+
+    .ot-featured-intro,
+    .ot-highlight-item p {
+        font-size: 17px;
+    }
+
+    .ot-highlight-item {
+        grid-template-columns: 42px minmax(0, 1fr);
+        gap: 11px;
+    }
+
+    .ot-highlight-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+    .ot-highlight-item h3 {
+        font-size: 17px;
+    }
+
+    .ot-footer-inner {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 30px;
+    }
+
+    .ot-footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .ot-footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .ot-footer-brand > p {
+        max-width: 700px;
+    }
+
+    .ot-footer-bottom {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   TABLET PORTRAIT + LARGE MOBILE: 481px–768px
+===================================================== */
+
+@media (max-width: 768px) {
+    .ot-topbar-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        padding-block: 9px;
+    }
+
+    .ot-topbar-info {
+        justify-content: center;
+        gap: 6px 18px;
+    }
+
+    .ot-topbar-info a {
+        font-size: 12px;
+    }
+
+    .ot-topbar-right {
+        justify-content: center;
+    }
+
+    .ot-topbar-message {
+        display: none;
+    }
+
+    /* Two-column logo and admission row, centered title above */
+
+    .ot-header-inner {
+        width: 92%;
+        min-height: 0;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 17px 13px;
+        padding-block: 18px;
+    }
+
+    .ot-header-brand {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .ot-header-overline {
+        font-size: 12px;
+        letter-spacing: 1.5px;
+    }
+
+    .ot-header-brand h2 {
+        font-size: clamp(24px, 5.2vw, 32px);
+    }
+
+    .ot-header-brand h2 span {
+        font-size: 0.65em;
+        letter-spacing: 1.5px;
+    }
+
+    .ot-header-brand > p {
+        font-size: 13px;
+    }
+
+    .ot-main-logo {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .ot-logo-frame {
+        max-width: 200px;
+        min-height: 78px;
+    }
+
+    .ot-admission-button {
+        grid-column: 2;
+        grid-row: 2;
+        min-height: 78px;
+        padding: 9px;
+    }
+
+    .ot-admission-symbol {
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+        font-size: 15px;
+    }
+
+    .ot-admission-details small {
+        font-size: 8px;
+    }
+
+    .ot-admission-details strong {
+        font-size: 15px;
+    }
+
+    .ot-admission-details > span {
+        font-size: 10px;
+    }
+
+    /* Marquee stays beneath the complete header */
+
+    .ot-announcement {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-rows: 36px 40px;
+    }
+
+    .ot-announcement-label {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        padding-inline: 4%;
+        font-size: 10px;
+    }
+
+    .ot-announcement-window {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .ot-announcement-track {
+        animation-duration: 30s;
+    }
+
+    .ot-announcement-group > span {
+        padding-inline: 15px;
+        font-size: 12px;
+    }
+
+    .ot-marquee-cta {
+        grid-column: 2;
+        grid-row: 2;
+        padding-inline: 10px;
+        font-size: 10px;
+    }
+
+    /* Hero */
+
+    .ot-hero {
+        padding: 47px 0 64px;
+    }
+
+    .ot-hero-inner {
+        width: 90%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 39px;
+    }
+
+    .ot-hero-content {
+        text-align: center;
+    }
+
+    .ot-hero-eyebrow {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 17px;
+        font-size: 15px;
+    }
+
+    .ot-eyebrow-line {
+        width: 19px;
+    }
+
+    .ot-hero-content h1 {
+        max-width: 650px;
+        margin-inline: auto;
+        font-size: clamp(36px, 7.5vw, 51px);
+        line-height: 1.2;
+    }
+
+    .ot-hero-content > p {
+        max-width: 620px;
+        margin: 19px auto 0;
+        font-size: 17px;
+        text-align: justify;
+    }
+
+    .ot-hero-buttons {
+        justify-content: center;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .ot-btn-primary,
+    .ot-btn-outline {
+        min-height: 49px;
+        padding: 11px 15px;
+        font-size: 13px;
+    }
+
+    .ot-hero-signature {
+        justify-content: center;
+        margin-top: 27px;
+        padding-top: 18px;
+        text-align: left;
+    }
+
+    .ot-hero-visual {
+        width: 100%;
+        max-width: 510px;
+        height: clamp(320px, 72vw, 420px);
+    }
+
+    .ot-hero-image-frame {
+        inset: 13px 8px 15px 12px;
+        border-radius: 110px 8px 100px 8px;
+    }
+
+    .ot-hero-image-collage {
+        gap: 9px;
+        padding: 8px;
+    }
+
+    .ot-hero-photo {
+        border-width: 3px;
+    }
+
+    .ot-hero-photo-main {
+        border-radius: 85px 4px 4px 4px;
+    }
+
+    .ot-hero-photo-top {
+        border-radius: 4px 45px 4px 4px;
+    }
+
+    .ot-hero-photo-bottom {
+        border-radius: 4px 4px 45px 4px;
+    }
+
+    .ot-photo-caption {
+        gap: 7px;
+        padding: 12px 8px;
+        font-size: 11px;
+    }
+
+    .ot-hero-image-label {
+        right: 0;
+        bottom: 1px;
+        max-width: 230px;
+        padding: 9px;
+    }
+
+    .ot-hero-round-seal {
+        width: 65px;
+        height: 65px;
+    }
+
+    /* Institution cards */
+
+    .ot-institutions {
+        padding: 60px 0 70px;
+    }
+
+    .ot-section-heading {
+        margin-bottom: 32px;
+    }
+
+    .ot-section-overline {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .ot-section-heading h2 {
+        font-size: clamp(30px, 6.3vw, 39px);
+    }
+
+    .ot-section-heading > p {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .ot-institution-grid {
+        width: 90%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 17px;
+    }
+
+    .ot-school-card {
+        padding: 17px 14px 21px;
+    }
+
+    .ot-school-card:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 9px);
+        justify-self: center;
+    }
+
+    .ot-school-logo {
+        height: 120px;
+        margin-block: 13px 16px;
+    }
+
+    .ot-school-mini-heading {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+
+    .ot-school-card-content h3 {
+        font-size: 20px;
+    }
+
+    .ot-school-card-content p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .ot-school-link {
+        font-size: 13px;
+    }
+
+    /* Video and feature text */
+
+    .ot-featured-section {
+        padding: 60px 0;
+    }
+
+    .ot-featured-inner {
+        width: 90%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 37px;
+    }
+
+    .ot-featured-content h2 {
+        font-size: clamp(32px, 6.5vw, 41px);
+    }
+
+    .ot-featured-intro,
+    .ot-highlight-item p {
+        font-size: 17px;
+    }
+
+    .ot-highlight-list {
+        gap: 17px;
+    }
+
+    .ot-highlight-item {
+        grid-template-columns: 45px minmax(0, 1fr);
+    }
+
+    .ot-highlight-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Footer */
+
+    .ot-footer-inner {
+        width: 90%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 24px;
+        padding: 45px 0 38px;
+    }
+
+    .ot-footer-brand,
+    .ot-footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .ot-footer-brand > p {
+        font-size: 17px;
+    }
+
+    .ot-footer-links h3,
+    .ot-footer-contact h3 {
+        font-size: 21px;
+    }
+
+    .ot-footer-links > a,
+    .ot-footer-contact > p,
+    .ot-footer-contact > a:not(.ot-footer-admission) {
+        font-size: 16px;
+    }
+
+    .ot-footer-bottom {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 18px;
+        padding: 18px 48px 18px 5%;
+        text-align: center;
+    }
+
+    .ot-footer-bottom p {
+        font-size: 13px;
+    }
+
+    .ot-back-top {
+        position: absolute;
+        right: 10px;
+        bottom: 14px;
+        width: 33px;
+        height: 33px;
+    }
+}
+
+/* =====================================================
+   MOBILE VIEW: 481px AND BELOW
+===================================================== */
+
+@media (max-width: 480px) {
+    .ot-topbar-inner {
+        width: 94%;
+    }
+
+    .ot-topbar-info {
+        justify-content: center;
+        gap: 6px 12px;
+    }
+
+    .ot-topbar-info a {
+        font-size: 11px;
+    }
+
+    .ot-header-inner {
+        width: 92%;
+        gap: 14px 9px;
+        padding-block: 16px;
+    }
+
+    .ot-header-overline {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .ot-header-brand h2 {
+        font-size: clamp(21px, 6vw, 26px);
+        letter-spacing: 0;
+    }
+
+    .ot-header-brand h2 span {
+        font-size: 0.62em;
+        letter-spacing: 0.8px;
+    }
+
+    .ot-header-brand > p {
+        font-size: 12px;
+    }
+
+    .ot-header-ornament {
+        margin-top: 5px;
+    }
+
+    .ot-logo-frame {
+        min-height: 67px;
+        padding: 5px;
+        outline-offset: 2px;
+    }
+
+    .ot-admission-button {
+        min-height: 68px;
+        gap: 6px;
+        padding: 7px;
+    }
+
+    .ot-admission-symbol {
+        width: 27px;
+        height: 27px;
+        flex-basis: 27px;
+        font-size: 13px;
+    }
+
+    .ot-admission-details small {
+        font-size: 7px;
+        letter-spacing: 0;
+    }
+
+    .ot-admission-details strong {
+        font-size: 12px;
+    }
+
+    .ot-admission-details > span {
+        font-size: 9px;
+    }
+
+    .ot-announcement {
+        grid-template-rows: 34px 38px;
+    }
+
+    .ot-announcement-label {
+        font-size: 9px;
+    }
+
+    .ot-announcement-group > span {
+        gap: 7px;
+        padding-inline: 12px;
+        font-size: 11px;
+    }
+
+    .ot-marquee-cta {
+        gap: 5px;
+        padding-inline: 7px;
+        font-size: 9px;
+    }
+
+    .ot-hero {
+        padding: 40px 0 53px;
+    }
+
+    .ot-hero-inner {
+        width: 90%;
+        gap: 34px;
+    }
+
+    .ot-hero-content h1 {
+        font-size: clamp(32px, 8.5vw, 39px);
+        letter-spacing: -0.5px;
+    }
+
+    .ot-hero-content > p {
+        margin-top: 17px;
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .ot-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .ot-btn-primary,
+    .ot-btn-outline {
+        width: 100%;
+        min-height: 48px;
+        font-size: 14px;
+    }
+
+    .ot-hero-signature {
+        margin-top: 23px;
+    }
+
+    .ot-hero-visual {
+        height: clamp(265px, 78vw, 320px);
+    }
+
+    .ot-hero-image-frame {
+        inset: 9px 5px 12px 8px;
+    }
+
+    .ot-hero-image-collage {
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .ot-photo-caption {
+        gap: 6px;
+        padding: 9px 6px;
+        font-size: 10px;
+    }
+
+    .ot-photo-caption i {
+        font-size: 13px;
+    }
+
+    .ot-hero-image-label {
+        right: 0;
+        bottom: 0;
+        max-width: 195px;
+        gap: 7px;
+        padding: 7px;
+    }
+
+    .ot-image-label-icon {
+        width: 29px;
+        height: 29px;
+        flex-basis: 29px;
+        font-size: 13px;
+    }
+
+    .ot-hero-image-label strong {
+        font-size: 10px;
+    }
+
+    .ot-hero-image-label small {
+        font-size: 9px;
+    }
+
+    .ot-hero-round-seal {
+        top: -2px;
+        right: 0;
+        width: 55px;
+        height: 55px;
+        border-width: 2px;
+    }
+
+    .ot-hero-round-seal i {
+        font-size: 12px;
+    }
+
+    .ot-hero-round-seal span {
+        font-size: 6px;
+    }
+
+    .ot-institutions {
+        padding: 50px 0 58px;
+    }
+
+    .ot-section-heading {
+        width: 90%;
+    }
+
+    .ot-section-overline {
+        gap: 6px;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+
+    .ot-section-heading h2 {
+        font-size: 29px;
+    }
+
+    .ot-section-heading > p {
+        font-size: 16px;
+    }
+
+    .ot-institution-grid {
+        width: 90%;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .ot-school-card,
+    .ot-school-card:last-child {
+        width: 100%;
+        grid-column: auto;
+        padding: 19px;
+    }
+
+    .ot-school-category {
+        font-size: 10px;
+    }
+
+    .ot-school-logo {
+        height: 140px;
+    }
+
+    .ot-school-mini-heading {
+        font-size: 10px;
+    }
+
+    .ot-school-card-content h3 {
+        font-size: 22px;
+    }
+
+    .ot-school-card-content p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .ot-school-link {
+        padding-top: 18px;
+        font-size: 14px;
+    }
+
+    .ot-featured-section {
+        padding: 49px 0;
+    }
+
+    .ot-featured-inner {
+        gap: 30px;
+    }
+
+    .ot-video-label {
+        font-size: 15px;
+        letter-spacing: 0.6px;
+    }
+
+    .ot-video-caption {
+        gap: 10px;
+        padding: 11px;
+    }
+
+    .ot-video-caption-icon {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+        font-size: 15px;
+    }
+
+    .ot-video-caption strong {
+        font-size: 13px;
+    }
+
+    .ot-video-caption small {
+        font-size: 12px;
+    }
+
+    .ot-featured-eyebrow {
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+
+    .ot-featured-content h2 {
+        font-size:25px;
+    }
+
+    .ot-featured-intro,
+    .ot-highlight-item p {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    .ot-highlight-list {
+        gap: 17px;
+    }
+
+    .ot-highlight-item {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .ot-highlight-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 16px;
+    }
+
+    .ot-highlight-item h3 {
+        font-size: 17px;
+    }
+
+    .ot-featured-cta {
+        width: 100%;
+        padding-inline: 10px;
+        font-size: 13px;
+    }
+
+    .ot-footer-inner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 29px;
+        padding: 40px 0 34px;
+    }
+
+    .ot-footer-brand,
+    .ot-footer-contact {
+        grid-column: auto;
+    }
+
+    .ot-footer-logo {
+        max-width: 210px;
+        min-height: 75px;
+    }
+
+    .ot-footer-brand h3 {
+        font-size: 21px;
+    }
+
+    .ot-footer-brand > p {
+        font-size: 17px;
+    }
+
+    .ot-footer-links h3,
+    .ot-footer-contact h3 {
+        margin-bottom: 19px;
+        font-size: 22px;
+    }
+
+    .ot-footer-links > a,
+    .ot-footer-contact > p,
+    .ot-footer-contact > a:not(.ot-footer-admission) {
+        font-size: 16px;
+    }
+
+    .ot-footer-bottom {
+        gap: 8px;
+        padding: 17px 42px 17px 4%;
+    }
+
+    .ot-footer-bottom p {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .ot-footer-motto {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .ot-back-top {
+        right: 6px;
+        bottom: 14px;
+        width: 30px;
+        height: 30px;
+        flex-basis: 30px;
+    }
+}
+
+/* =====================================================
+   EXTRA SMALL MOBILE: 350px AND BELOW
+===================================================== */
+
+@media (max-width: 350px) {
+    .ot-topbar-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .ot-header-inner {
+        gap: 12px 7px;
+    }
+
+    .ot-header-brand h2 {
+        font-size: 20px;
+    }
+
+    .ot-header-brand h2 span {
+        font-size: 0.6em;
+        letter-spacing: 0.2px;
+    }
+
+    .ot-header-brand > p {
+        font-size: 11px;
+    }
+
+    .ot-logo-frame {
+        min-height: 57px;
+        padding: 4px;
+    }
+
+    .ot-admission-button {
+        min-height: 61px;
+        gap: 4px;
+        padding: 5px;
+    }
+
+    .ot-admission-symbol {
+        width: 23px;
+        height: 23px;
+        flex-basis: 23px;
+        font-size: 11px;
+    }
+
+    .ot-admission-details small {
+        font-size: 6px;
+    }
+
+    .ot-admission-details strong {
+        font-size: 11px;
+    }
+
+    .ot-admission-details > span {
+        font-size: 8px;
+    }
+
+    .ot-announcement {
+        grid-template-rows: 33px 36px;
+    }
+
+    .ot-announcement-label {
+        padding-inline: 4%;
+        font-size: 9px;
+    }
+
+    .ot-marquee-cta {
+        gap: 4px;
+        padding-inline: 5px;
+        font-size: 8px;
+    }
+
+    .ot-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .ot-hero-visual {
+        height: 250px;
+    }
+
+    .ot-hero-image-label {
+        max-width: 168px;
+    }
+
+    .ot-hero-image-label strong {
+        font-size: 9px;
+    }
+
+    .ot-hero-image-label small {
+        font-size: 8px;
+    }
+
+    .ot-hero-round-seal {
+        width: 49px;
+        height: 49px;
+    }
+
+    .ot-section-heading h2 {
+        font-size: 26px;
+    }
+
+    .ot-school-card {
+        padding: 15px;
+    }
+
+    .ot-school-card-content h3 {
+        font-size: 20px;
+    }
+
+    .ot-featured-content h2 {
+        font-size: 25px;
+    }
+}
+
+/* ================= ACCESSIBILITY ================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
