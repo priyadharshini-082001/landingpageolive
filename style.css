@@ -1,9 +1,9 @@
 
-/* =====================================================
+/* =========================================================
    OLIVE TREE GROUP OF SCHOOLS
-   PREMIUM RESPONSIVE DESIGN
-   Bright Dark Green + Rich Dark Brown + Gold + Ivory
-===================================================== */
+   RESPONSIVE DESIGN: DESKTOP / TABLET / MOBILE
+   Forest Green + Earthy Brown + Gold + Ivory + Sky Blue
+========================================================= */
 
 /* ================= GLOBAL ================= */
 
@@ -20,9 +20,10 @@ html {
 
 body {
     width: 100%;
-    overflow-x: clip;
+    min-width: 0;
+    overflow-x: hidden;
     background: #ffffff;
-    color: #000000;
+    color: #17251a;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.75;
@@ -31,6 +32,7 @@ body {
 img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 a {
@@ -39,19 +41,23 @@ a {
 }
 
 p {
-    color: #000000;
+    color: #202820;
     font-size: 17px;
     line-height: 1.8;
     text-align: justify;
     overflow-wrap: anywhere;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     overflow-wrap: anywhere;
+    line-height: 1.35;
 }
 
 a:focus-visible {
-    outline: 3px solid #cda84f;
+    outline: 3px solid #e4bd62;
     outline-offset: 4px;
 }
 
@@ -70,8 +76,7 @@ a:focus-visible {
 .ot-header-inner,
 .ot-hero-inner,
 .ot-institution-grid,
-.ot-featured-inner,
-.ot-footer-inner {
+.ot-featured-inner {
     width: min(1400px, 92%);
     margin-inline: auto;
 }
@@ -83,7 +88,7 @@ a:focus-visible {
     z-index: 20;
     color: #ffffff;
     background: #173f27;
-    border-bottom: 1px solid #c9a653;
+    border-bottom: 2px solid #c9a653;
 }
 
 .ot-topbar-inner {
@@ -91,8 +96,9 @@ a:focus-visible {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
-    padding-block: 6px;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding-block: 7px;
 }
 
 .ot-topbar-info,
@@ -100,11 +106,12 @@ a:focus-visible {
 .ot-topbar-social {
     display: flex;
     align-items: center;
+    min-width: 0;
 }
 
 .ot-topbar-info {
     flex-wrap: wrap;
-    gap: 10px 25px;
+    gap: 8px 22px;
 }
 
 .ot-topbar-info a {
@@ -113,13 +120,15 @@ a:focus-visible {
     gap: 9px;
     color: #ffffff;
     font-size: 15px;
-    line-height: 1.6;
-    transition: color 0.3s ease;
     font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
 }
 
 .ot-topbar-info a i {
     color: #f0cd70;
+    flex-shrink: 0;
 }
 
 .ot-topbar-info a:hover {
@@ -128,14 +137,15 @@ a:focus-visible {
 
 .ot-topbar-right {
     justify-content: flex-end;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .ot-topbar-message {
     color: #f4dfab;
     font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 .ot-topbar-social {
@@ -144,16 +154,16 @@ a:focus-visible {
 }
 
 .ot-topbar-social a {
-    width: 29px;
-    height: 29px;
+    width: 30px;
+    height: 30px;
     display: grid;
     place-items: center;
     color: #ffffff;
-    background: rgba(255,255,255,0.07);
+    background: rgba(255,255,255,0.08);
     border: 1px solid rgba(244,215,145,0.4);
     border-radius: 50%;
     font-size: 12px;
-    transition: 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .ot-topbar-social a:hover {
@@ -162,711 +172,79 @@ a:focus-visible {
     border-color: #f0ce79;
 }
 
-/* ================= PREMIUM MAIN HEADER ================= */
-
-.ot-main-header {
-    position: relative;
-    z-index: 15;
-    background: #f5fff5;
-    border-bottom: 4px solid rgb(103, 8, 8);
-}
-
-.ot-main-header::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 7px;
-    background: darkgreen;
-}
-
-.ot-header-inner {
-    min-height: 150px;
-    display: grid;
-    grid-template-columns: minmax(150px, 0.85fr) minmax(0, 1.65fr) minmax(245px, 1fr);
-    align-items: center;
-    gap: 26px;
-    padding-block: 17px;
-}
-
-/* Group logo */
-
-.ot-main-logo {
-    min-width: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ot-logo-frame {
-    width: 100%;
-    max-width: 500px;
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 12px;
-    background: #ffffff;
-    border: 1px solid rgb(103, 8, 8);
-    border-radius: 12px 3px 12px 3px;
-    outline: 1px solid #e9ddbd;
-    outline-offset: 3px;
-}
-
-.ot-logo-frame img {
-    width: 100%;
-    max-height: 112px;
-    object-fit: contain;
-}
-
-/* Brand name */
-
-.ot-header-brand {
-    min-width: 0;
-    text-align: center;
-}
-
-.ot-header-overline {
-    display: inline-block;
-    margin-bottom: 5px;
-    color: rgb(103, 8, 8);
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 2.4px;
-    line-height: 1.6;
-}
-
-.ot-header-brand h2 {
-    color: darkgreen;
-    font-size: clamp(24px, 2.4vw, 36px);
-    font-weight: 800;
-    line-height: 1.25;
-    letter-spacing: 0.6px;
-}
-
-.ot-header-brand h2 span {
-    display: block;
-    margin-top: 5px;
-    color: rgb(103, 8, 8);
-    font-size: 0.67em;
-    letter-spacing: 2.4px;
-}
-
-.ot-header-brand > p {
-    margin-top: 6px;
-    color: #000000;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.6;
-    font-style: italic;
-}
-
-.ot-header-ornament {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 8px;
-    color: rgb(103, 8, 8);
-    font-size: 14px;
-}
-
-.ot-header-ornament span {
-    width: 37px;
-    height: 2px;
-    background: rgb(103, 8, 8);
-}
-
-/* Admissions button */
-
-.ot-admission-button {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    min-width: 0;
-    min-height: 91px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px;
-    color: #ffffff;
-    background: linear-gradient(125deg, #28683e, #164126);
-    border: 1px solid rgb(103, 8, 8);
-    border-radius: 4px 16px 4px 16px;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.ot-admission-button:hover {
-    background: linear-gradient(125deg, #347b49, #205632);
-    transform: translateY(-3px);
-}
-
-.ot-admission-symbol {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 44px;
-    display: grid;
-    place-items: center;
-    color: #1a4b2c;
-    background: #f0d486;
-    border-radius: 10px 3px 10px 3px;
-    font-size: 21px;
-}
-
-.ot-admission-details {
-    min-width: 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.ot-admission-details small {
-    color: #ffe6a7;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    line-height: 1.5;
-}
-
-.ot-admission-details strong {
-    color: #ffffff;
-    font-size: 19px;
-    line-height: 1.35;
-}
-
-.ot-admission-details > span {
-    color: #ffffff;
-    font-size: 12px;
-    line-height: 1.5;
-}
-
-.ot-admission-arrow {
-    flex: 0 0 auto;
-    color: #f3d78d;
-    font-size: 15px;
-}
-
-/* ================= ANNOUNCEMENT MARQUEE ================= */
-
-.ot-announcement {
-    position: relative;
-    z-index: 10;
-    min-height: 49px;
-    display: flex;
-    align-items: stretch;
-    background: #ffffff;
-    border-bottom: 1px solid #d9c69a;
-}
-
-.ot-announcement-label {
-    position: relative;
-    z-index: 2;
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 21px;
-    color: #ffffff;
-    background: rgb(103, 8, 8);
-    font-size: 15px;
-    font-weight:500;
-    letter-spacing: 0.7px;
-}
-
-.ot-announcement-icon {
-    color: #ffdc80;
-    font-size: 17px;
-}
-
-.ot-announcement-window {
-    min-width: 0;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-}
-
-.ot-announcement-track {
-    width: max-content;
-    flex: 0 0 auto;
-    display: flex;
-    animation: ot-marquee 34s linear infinite;
-}
-
-.ot-announcement:hover .ot-announcement-track {
-    animation-play-state: paused;
-}
-
-.ot-announcement-group {
-    display: flex;
-    align-items: center;
-    flex: 0 0 auto;
-}
-
-.ot-announcement-group > span {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 25px;
-    color:darkgreen;
-    font-size: 15px;
-    font-weight: 700;
-    white-space: nowrap;
-}
-
-.ot-announcement-group > span i {
-    color: rgb(103, 8, 8);
-}
-
-.ot-marquee-cta {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 0 19px;
-    color: #ffffff;
-    background:darkgreen;
-    font-size: 15px;
-    font-weight: 500;
-    white-space: nowrap;
-    transition: background 0.3s ease;
-}
-
-.ot-marquee-cta:hover {
-    background: rgb(103, 8, 8);
-}
-
-@keyframes ot-marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
-}
-
-/* ================= HERO SECTION ================= */
-
-.ot-hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    padding: 78px 0 88px;
-    background:cornsilk;
-}
-
-.ot-hero::before {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    content: "";
-    opacity: 0.18;
-    background-image: radial-gradient(#1c6308 0.8px, transparent 0.8px);
-    background-size: 22px 22px;
-    pointer-events: none;
-}
-
-.ot-hero-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
-    align-items: center;
-    gap: clamp(32px, 5vw, 70px);
-}
-
-.ot-hero-content {
-    min-width: 0;
-}
-
-.ot-hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    margin-bottom: 22px;
-    color: rgb(103, 8, 8);
-    font-size: 17px;
-    font-weight: 800;
-    letter-spacing: 2px;
-}
-
-.ot-eyebrow-line {
-    width: 27px;
-    height: 2px;
-    flex: 0 0 auto;
-    background: #bd9646;
-}
-
-.ot-hero-content h1 {
-    max-width: 700px;
-    color: #17472b;
-    font-size: clamp(42px, 4.4vw, 50px);
-    font-weight: 700;
-    line-height: 1.16;
-    letter-spacing: -1px;
-}
-
-.ot-hero-content h1 span {
-    display: block;
-    margin-top: 7px;
-    color: rgb(103, 8, 8);
-    font-style: italic;
-}
-
-.ot-hero-content > p {
-    max-width: 620px;
-    margin-top: 23px;
-    color: #000000;
-    font-size: 17px;
-    line-height: 1.9;
-    text-align: justify;
-    font-weight: 500;
-}
-
-.ot-hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 13px;
-    margin-top: 29px;
-}
-
-.ot-btn-primary,
-.ot-btn-outline {
-    min-height: 52px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 12px 21px;
-    border-radius: 3px 12px 3px 12px;
-    font-size: 14px;
-    font-weight: 800;
-    transition: 0.3s ease;
-}
-
-.ot-btn-primary {
-    color: #ffffff;
-    background: darkgreen;
-    border: 1px solid #216039;
-}
-
-.ot-btn-primary:hover {
-    background: rgb(103, 8, 8);
-    border-color: #704326;
-    transform: translateY(-3px);
-}
-
-.ot-btn-outline {
-    color: #194c2e;
-    background: #ffffff;
-    border: 1px solid #b8954d;
-}
-
-.ot-btn-outline:hover {
-    color: #ffffff;
-    background:rgb(103, 8, 8);
-    border-color: rgb(103, 8, 8);
-    transform: translateY(-3px);
-}
-
-.ot-hero-signature {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    margin-top: 34px;
-    padding-top: 22px;
-    border-top: 1px solid #ddcfad;
-}
-
-.ot-signature-icon {
-    width: 45px;
-    height: 45px;
-    flex: 0 0 45px;
-    display: grid;
-    place-items: center;
-    color: #ffffff;
-    background:rgb(103, 8, 8);
-    border-radius: 50% 50% 5px 50%;
-    font-size: 19px;
-}
-
-.ot-hero-signature strong,
-.ot-hero-signature small {
-    display: block;
-}
-
-.ot-hero-signature strong {
-    color: darkgreen;
-    font-size: 15px;
-}
-
-.ot-hero-signature small {
-    color: rgb(103, 8, 8);
-    font-size: 13px;
-}
-
-.ot-hero-decoration {
-    position: absolute;
-    z-index: -1;
-    border: 1px solid rgba(165,129,55,0.2);
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.ot-hero-decoration-one {
-    top: 5%;
-    right: -100px;
-    width: 270px;
-    height: 270px;
-}
-
-.ot-hero-decoration-two {
-    top: 10%;
-    right: -55px;
-    width: 180px;
-    height: 180px;
-}
-
-.ot-hero-decoration-three {
-    bottom: -130px;
-    left: 38%;
-    width: 270px;
-    height: 270px;
-}
-
-/* ================= HERO IMAGE COLLAGE ================= */
-
-.ot-hero-visual {
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    max-width: 590px;
-    min-width: 0;
-    height: 490px;
-    margin-inline: auto;
-}
-
-.ot-hero-image-frame {
-    position: absolute;
-    z-index: -1;
-    inset: 20px 12px 23px 23px;
-    border: 2px solid #b99850;
-    border-radius: 155px 12px 140px 12px;
-    transform: rotate(2deg);
-}
-
-.ot-hero-image-collage {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    grid-template-columns: 1.12fr 0.88fr;
-    grid-template-rows: 1fr 0.83fr;
-    gap: 13px;
-    padding: 11px;
-}
-
-.ot-hero-photo {
-    position: relative;
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
-    background: #e7e0cd;
-    border: 4px solid #ffffff;
-    outline: 1px solid #d9c69a;
-}
-
-.ot-hero-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.ot-hero-photo:hover img {
-    transform: scale(1.05);
-}
-
-.ot-hero-photo-main {
-    grid-column: 1;
-    grid-row: 1 / 3;
-    border-radius: 115px 5px 5px 5px;
-}
-
-.ot-hero-photo-top {
-    grid-column: 2;
-    grid-row: 1;
-    border-radius: 5px 65px 5px 5px;
-}
-
-.ot-hero-photo-bottom {
-    grid-column: 2;
-    grid-row: 2;
-    border-radius: 5px 5px 65px 5px;
-}
-
-.ot-photo-caption {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    gap: 9px;
-    padding: 16px 12px;
-    color: #ffffff;
-    background: linear-gradient(transparent, rgba(14,49,27,0.96));
-    font-size: 13px;
-    font-weight: 700;
-}
-
-.ot-photo-caption i {
-    color: #f2d27b;
-    font-size: 17px;
-}
-
-.ot-hero-image-label {
-    position: absolute;
-    right: -12px;
-    bottom: 12px;
-    max-width: 280px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    background: #ffffff;
-    border: 1px solid #d9c69a;
-    border-left: 4px solid #216039;
-    border-radius: 3px 12px 3px 12px;
-}
-
-.ot-image-label-icon {
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
-    display: grid;
-    place-items: center;
-    color: #ffffff;
-    background: rgb(103, 8, 8);
-    border-radius: 50%;
-    font-size: 18px;
-}
-
-.ot-hero-image-label strong,
-.ot-hero-image-label small {
-    display: block;
-}
-
-.ot-hero-image-label strong {
-    color: darkgreen;
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-.ot-hero-image-label small {
-    color: #000000;
-    font-size: 12px;
-    line-height: 1.6;
-}
-
-.ot-hero-round-seal {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 82px;
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #ffffff;
-    background: darkgreen;
-    border: 3px solid #f0d181;
-    outline: 2px solid #216039;
-    outline-offset: 3px;
-    border-radius: 50%;
-    transform: rotate(7deg);
-}
-
-.ot-hero-round-seal i {
-    color: #f2d78b;
-    font-size: 18px;
-}
-
-.ot-hero-round-seal span {
-    font-size: 8px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    line-height: 1.5;
-}
-
-.ot-hero-bottom-pattern {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 7px;
-    background: repeating-linear-gradient(
-        135deg,
-        #216039 0,
-        #216039 14px,
-        #c6a452 14px,
-        #c6a452 20px,
-        #f6f0df 20px,
-        #f6f0df 28px
-    );
-}
-
-/* ===== OUR INSTITUTIONS ===== */
+/* ================= OUR INSTITUTIONS ================= */
 
 .ot-institutions {
     position: relative;
-    padding: 45px 3.2% 55px;
-    background: #fffefa;
+    isolation: isolate;
     overflow: hidden;
+    padding: 55px 20px 60px;
+
+    /* Tree landscape + transparent colour gradient */
+    background:
+        linear-gradient(
+            115deg,
+            rgba(255, 253, 231, 0.30) 0%,
+            rgba(220, 240, 202, 0.24) 40%,
+            rgba(153, 218, 210, 0.32) 100%
+        ),
+        url("/image/sea.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
 }
 
-/* SECTION HEADING */
+.ot-institutions > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* ================= SECTION HEADING ================= */
 
 .ot-section-heading {
+    width: min(900px, 100%);
+    margin: 0 auto 35px;
     text-align: center;
-    margin: 0 auto 32px;
 }
 
 .ot-section-overline {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 9px;
-    color: #790c0c;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
     margin-bottom: 12px;
+    color: #794322;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
 }
 
 .ot-section-overline i {
-    color: #087329;
+    color: #176b35;
 }
 
 .ot-section-heading h2 {
-    font-size: clamp(28px, 3.2vw, 42px);
+    margin: 0 0 14px;
+    color: #245331;
+    font-size: clamp(28px, 3vw, 38px);
     font-weight: 800;
-    color: #087329;
-    line-height: 1.2;
-    margin: 0 0 12px;
+    line-height: 1.25;
 }
 
 .ot-section-heading h2 span {
-    color: #800d13;
+    color: #80451f;
     font-style: italic;
 }
 
 .ot-section-heading p {
-    font-size: 17px;
-    color: #333;
     margin: 0;
-    line-height: 1.6;
+    color: #202820;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: center;
 }
 
 .ot-heading-ornament {
@@ -874,98 +252,59 @@ a:focus-visible {
     align-items: center;
     justify-content: center;
     gap: 13px;
-    margin-top: 17px;
-    color: #16752b;
+    margin-top: 18px;
+    color: #176b35;
     font-size: 18px;
 }
 
 .ot-heading-ornament span {
-    display: block;
-    width: 34px;
+    width: 42px;
     height: 2px;
-    background: #d5ad51;
+    display: block;
+    background: #c9a653;
 }
 
-/* THREE SCHOOL CARDS */
+/* ================= THREE SCHOOL CARDS ================= */
 
 .ot-institution-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
+    align-items: stretch;
 }
 
 .ot-school-card {
     position: relative;
-    height: 470px;
-    overflow: hidden;
     isolation: isolate;
-    border-radius: 12px;
-    background: #f5f5f5;
-    border: 1px solid rgba(30, 50, 30, 0.12);
+    min-width: 0;
+    height: 480px;
+    overflow: hidden;
+    border: 1px solid rgba(36, 83, 49, 0.2);
+    border-radius: 14px;
+    background: #f5f2e8;
 }
 
-/* BUILDING IMAGE */
+/* SCHOOL BUILDING IMAGE */
 
 .ot-school-building {
     position: absolute;
     inset: 0;
-    z-index: -3;
+    z-index: -2;
     width: 100%;
     height: 100%;
+    max-width: none;
     object-fit: cover;
     object-position: center;
     transition: transform 0.6s ease;
 }
 
 .ot-school-card:hover .ot-school-building {
-    transform: scale(1.055);
+    transform: scale(1.045);
 }
 
-/* COLOUR OVERLAY */
 
-.ot-school-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.03) 15%,
-        rgba(255, 255, 255, 0.10) 35%,
-        rgba(255, 239, 181, 0.80) 65%,
-        rgba(255, 224, 125, 0.98) 100%
-    );
-}
-
-/* INDIVIDUAL SCHOOL COLOURS */
-
-.ot-school-one .ot-school-overlay {
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.02) 15%,
-        rgba(255, 249, 229, 0.08) 35%,
-        #f5cc59 100%
-    );
-}
-
-.ot-school-two .ot-school-overlay {
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.02) 15%,
-        rgba(246, 255, 238, 0.08) 35%,
-        #79b65f 100%
-    );
-}
-
-.ot-school-three .ot-school-overlay {
-    background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.02) 15%,
-        rgba(241, 246, 255, 0.08) 35%,
-        #477fd4 100%
-    );
-}
 
 /* NUMBER BADGE */
 
@@ -973,63 +312,67 @@ a:focus-visible {
     position: absolute;
     top: 15px;
     left: 15px;
-    width: 59px;
+    z-index: 2;
+    width: 56px;
     height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px 12px 35px 12px;
-    background: #800d13;
-    color: #fff;
-    font-size: 24px;
+    border-radius: 12px 12px 30px 12px;
+    background: #80451f;
+    color: #ffffff;
+    font-size: 23px;
     font-weight: 800;
 }
 
 .ot-school-two .ot-school-number {
-    background: #086329;
+    background: #176b35;
 }
 
 .ot-school-three .ot-school-number {
-    background: #123a8a;
+    background: #16468b;
 }
 
 /* BOTTOM CONTENT */
 
 .ot-school-bottom {
     position: absolute;
+    z-index: 2;
     left: 15px;
     right: 15px;
     bottom: 22px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 0;
     text-align: center;
 }
 
-/* HIGHLIGHTED CIRCULAR LOGO */
+/* SCHOOL LOGO */
 
 .ot-school-logo {
-    width: 175px;
-    height: 175px;
-    max-width: 68%;
-    border-radius: 50%;
+    width:150px;
+    height: 150px;
+    max-width:150%;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px;
-    margin-bottom: 13px;
-    background: #fff;
-    border: 4px solid #e8b124;
     overflow: hidden;
+    padding: 12px;
+    margin-bottom: 14px;
+    background: #ffffff;
+    border: 4px solid #d6aa36;
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .ot-school-two .ot-school-logo {
-    border-color: #2f8f17;
+    border-color: #2f8f47;
 }
 
 .ot-school-three .ot-school-logo {
-    border-color: #134289;
+    border-color: #16468b;
 }
 
 .ot-school-card:hover .ot-school-logo {
@@ -1037,9 +380,9 @@ a:focus-visible {
 }
 
 .ot-school-logo img {
-    display: block;
-    width: 100%;
-    height: 100%;
+    width: 145px;
+    height: 145px;
+    max-width: none;
     object-fit: contain;
 }
 
@@ -1047,15 +390,15 @@ a:focus-visible {
 
 .ot-school-bottom h3 {
     width: 100%;
-    max-width: 100%;
     margin: 0 0 12px;
-    padding: 11px 12px;
-    border-radius: 40px;
-    background: rgba(255, 255, 255, 0.68);
-    color: #800d13;
-    font-size: 20px;
+    padding: 10px 13px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.92);
+    color: #80451f;
+    font-size: 19px;
     font-weight: 800;
     line-height: 1.4;
+    overflow-wrap: anywhere;
 }
 
 .ot-school-two .ot-school-bottom h3 {
@@ -1069,18 +412,19 @@ a:focus-visible {
 /* SCHOOL LINK */
 
 .ot-school-link {
+    max-width: 100%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
-    padding: 8px 18px;
-    color: #790c12;
-    background: rgba(255, 255, 255, 0.82);
+    padding: 9px 18px;
     border-radius: 30px;
+    background: rgba(255,255,255,0.94);
+    color: #794322;
     font-size: 15px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: 800;
+    line-height: 1.5;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .ot-school-two .ot-school-link {
@@ -1096,347 +440,69 @@ a:focus-visible {
 }
 
 .ot-school-link:hover {
-    background: #fff;
+    background: #ffffff;
 }
 
 .ot-school-link:hover i {
     transform: translateX(4px);
 }
 
-/* TABLET */
-
-@media (max-width: 1000px) {
-    .ot-institution-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-    }
-
-    .ot-school-card {
-        height: 450px;
-    }
-
-    .ot-school-card:last-child {
-        grid-column: 1 / -1;
-        width: calc(50% - 10px);
-        justify-self: center;
-    }
-}
-
-/* MOBILE */
-
-@media (max-width: 650px) {
-    .ot-institutions {
-        padding: 32px 16px 38px;
-    }
-
-    .ot-section-heading {
-        margin-bottom: 25px;
-    }
-
-    .ot-section-overline {
-        font-size: 11px;
-        letter-spacing: 1px;
-    }
-
-    .ot-section-heading h2 {
-        font-size: 29px;
-    }
-
-    .ot-section-heading p {
-        font-size: 16px;
-    }
-
-    .ot-institution-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        max-width: 440px;
-    }
-
-    .ot-school-card,
-    .ot-school-card:last-child {
-        width: 100%;
-        height: 450px;
-        grid-column: auto;
-    }
-
-    .ot-school-logo {
-        width: 155px;
-        height: 155px;
-    }
-
-    .ot-school-bottom h3 {
-        font-size: 18px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .ot-school-building,
-    .ot-school-logo,
-    .ot-school-link i {
-        transition: none;
-    }
-}
-
-/* ================= FEATURED VIDEO SECTION ================= */
-
-.ot-featured-section {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    padding: 80px 0;
-    background:aliceblue;
-}
-
-.ot-featured-background-pattern {
-    position: absolute;
-    z-index: -1;
-    inset: 0;
-    opacity: 0.2;
-    background-image: radial-gradient(#8d9c76 0.8px, transparent 0.8px);
-    background-size: 23px 23px;
-    pointer-events: none;
-}
-
-.ot-featured-inner {
-    display: grid;
-    grid-template-columns: minmax(0, 1.03fr) minmax(0, 0.97fr);
-    align-items: center;
-    gap: 52px;
-}
-
-.ot-video-column,
-.ot-featured-content {
-    min-width: 0;
-}
-
-.ot-video-topline {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 16px;
-}
-
-.ot-video-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: darkgreen;
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 1.2px;
-}
-
-.ot-video-label i {
-    color:rgb(103, 8, 8);
-    font-size: 22px;
-}
-
-.ot-video-live-dot {
-    width: 10px;
-    height: 10px;
-    flex: 0 0 10px;
-    background: #c49a42;
-    border-radius: 50%;
-    outline: 4px solid rgba(196,154,66,0.2);
-}
-
-.ot-video-frame {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: darkgreen;
-    border: 5px solid #ffffff;
-    outline: 1px solid #c6a452;
-    border-radius: 4px 18px 4px 18px;
-}
-
-.ot-video-frame iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.ot-video-caption {
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    margin-top: 18px;
-    padding: 15px;
-    background: #ffffff;
-    border: 1px solid #e0d4b9;
-    border-left: 4px solid darkgreen;
-}
-
-.ot-video-caption-icon {
-    width: 42px;
-    height: 42px;
-    flex: 0 0 42px;
-    display: grid;
-    place-items: center;
-    color: #ffffff;
-    background: rgb(103, 8, 8);
-    border-radius: 50%;
-    font-size: 18px;
-}
-
-.ot-video-caption strong,
-.ot-video-caption small {
-    display: block;
-}
-
-.ot-video-caption strong {
-    color: darkgreen;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-.ot-video-caption small {
-    color: #000000;
-    font-size: 15px;
-    line-height: 1.6;
-    font-weight: 500;
-}
-
-.ot-featured-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    margin-bottom: 14px;
-    color: rgb(103, 8, 8);
-    font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-}
-
-.ot-featured-eyebrow i {
-    color: rgb(103, 8, 8);
-    font-size: 17px;
-}
-
-.ot-featured-content h2 {
-    color: darkgreen;
-    font-size: clamp(32px, 3.2vw, 45px);
-    line-height: 1.3;
-}
-
-.ot-featured-content h2 span {
-    display: block;
-    color: rgb(103, 8, 8);
-    font-style: italic;
-}
-
-.ot-featured-intro {
-    margin-top: 17px;
-    color: #000000;
-    font-size: 17px;
-    line-height: 1.85;
-    text-align: justify;
-    font-weight: 500;
-}
-
-.ot-highlight-list {
-    display: grid;
-    gap: 17px;
-    margin-top: 26px;
-}
-
-.ot-highlight-item {
-    display: grid;
-    grid-template-columns: 48px minmax(0, 1fr);
-    align-items: start;
-    gap: 14px;
-}
-
-.ot-highlight-icon {
-    width: 47px;
-    height: 47px;
-    display: grid;
-    place-items: center;
-    color: #ffffff;
-    background: darkgreen;
-    border-radius: 3px 12px 3px 12px;
-    font-size: 20px;
-}
-
-.ot-highlight-item:nth-child(2) .ot-highlight-icon {
-    background: rgb(103, 8, 8);
-}
-
-.ot-highlight-item:nth-child(3) .ot-highlight-icon {
-    background: darkgreen;
-}
-
-.ot-highlight-item h3 {
-    margin-bottom: 3px;
-    color: darkgreen;
-    font-size: 19px;
-    line-height: 1.5;
-}
-
-.ot-highlight-item p {
-    color: #000000;
-    font-size: 17px;
-    line-height: 1.7;
-    text-align: justify;
-    font-weight: 500;
-}
-
-.ot-featured-cta {
-    min-height: 51px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 13px;
-    margin-top: 28px;
-    padding: 12px 21px;
-    color: #ffffff;
-    background: darkgreen;
-    border: 1px solid #216039;
-    border-radius: 3px 12px 3px 12px;
-    font-size: 15px;
-    font-weight:500;
-    transition: 0.3s ease;
-}
-
-.ot-featured-cta:hover {
-    background: rgb(103, 8, 8);
-    border-color: #704326;
-    transform: translateY(-3px);
-}
-
 /* ================= FOOTER ================= */
 
 .ot-footer {
     position: relative;
+    width: 100%;
+    min-width: 0;
     overflow: hidden;
+    background: rgb(66, 17, 2);
     color: #ffffff;
-    background:
-        radial-gradient(ellipse at 80% 0%, rgba(92,135,72,0.2), transparent 35%),
-        #153c25;
 }
 
+.ot-footer *,
+.ot-footer *::before,
+.ot-footer *::after {
+    box-sizing: border-box;
+}
+
+.ot-footer a {
+    text-decoration: none;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.ot-footer p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.75;
+    text-align: justify;
+    overflow-wrap: anywhere;
+}
+
+/* GOLD TOP PATTERN */
+
 .ot-footer-top-pattern {
+    width: 100%;
     height: 7px;
-    background: repeating-linear-gradient(
-        135deg,
-        #d7b75f 0,
-        #d7b75f 14px,
-        #704326 14px,
-        #704326 20px,
-        #216039 20px,
-        #216039 28px
+    background: linear-gradient(
+        90deg,
+        #784522,
+        #d6aa70,
+        #f0d5a7,
+        #d6aa70,
+        #784522
     );
 }
 
+/* FOOTER GRID */
+
 .ot-footer-inner {
+    width: min(1240px, calc(100% - 48px));
+    margin-inline: auto;
+    padding: 50px 0;
     display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr) minmax(0, 1fr);
-    gap: 48px;
-    padding: 60px 0 48px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 38px;
+    align-items: start;
 }
 
 .ot-footer-brand,
@@ -1445,113 +511,165 @@ a:focus-visible {
     min-width: 0;
 }
 
+/* FOOTER BRAND */
+
 .ot-footer-logo {
-    max-width: 240px;
-    min-height: 88px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 14px;
+    display: inline-block;
+    max-width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 19px;
+    border-radius: 5px;
     background: #ffffff;
-    border: 1px solid #d8b96c;
-    border-radius: 4px 13px 4px 13px;
 }
 
 .ot-footer-logo img {
-    width: 100%;
-    max-height: 100px;
+    display: block;
+    width: 205px;
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
 .ot-footer-brand h3 {
-    margin-top: 20px;
-    color: #f2d687;
+    margin: 0 0 15px;
+    color: #f0d5a7;
     font-size: 22px;
-    line-height: 1.5;
+    font-weight: 800;
+    line-height: 1.4;
 }
 
 .ot-footer-brand > p {
-    margin-top: 12px;
+    margin-bottom: 22px;
     color: #ffffff;
     font-size: 17px;
     line-height: 1.8;
-    text-align: justify;
-    font-weight: 500;
 }
+
+/* FOOTER SOCIAL ICONS */
 
 .ot-footer-social {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 22px;
 }
 
 .ot-footer-social a {
-    width: 39px;
-    height: 39px;
-    display: grid;
-    place-items: center;
-    color: #ffe5a4;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(229,201,132,0.5);
-    border-radius: 50%;
-    transition: 0.3s ease;
-        font-weight: 500;
-
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 5px;
+    background: #286b43;
+    color: #ffffff;
+    font-size: 17px;
 }
 
 .ot-footer-social a:hover {
-    color: #173f27;
-    background: #f0cf7c;
-    border-color: #f0cf7c;
+    background: #a66a3c;
+    color: #ffffff;
 }
 
-.ot-footer-links h3,
-.ot-footer-contact h3 {
+/* FOOTER SECTION HEADINGS */
+
+.ot-footer-links > h3,
+.ot-footer-contact > h3 {
     position: relative;
-    margin-bottom: 23px;
+    margin: 0 0 24px;
     padding-bottom: 13px;
-    color: #f4d98f;
-        font-size: 23px;
+    color: #f0d5a7;
+    font-size: 22px;
+    font-weight: 800;
     line-height: 1.4;
-        font-weight: 500;
-
 }
 
-.ot-footer-links h3::after,
-.ot-footer-contact h3::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 48px;
-    height: 2px;
+.ot-footer-links > h3::after,
+.ot-footer-contact > h3::after {
     content: "";
-    background: #d1ae58;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 52px;
+    height: 3px;
+    background: #d6aa70;
 }
 
-.ot-footer-links > a {
+/* SCHOOL LINKS */
+
+.ot-footer-school {
+    min-width: 0;
+    margin-bottom: 16px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.16);
+}
+
+.ot-footer-school > a {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin: 12px 0;
+    gap: 9px;
+    margin-bottom: 7px;
     color: #ffffff;
     font-size: 17px;
-    line-height: 1.7;
+    font-weight: 700;
+    line-height: 1.5;
     overflow-wrap: anywhere;
-    transition: color 0.3s ease;
-        font-weight: 500;
-
 }
 
-.ot-footer-links > a i {
-    flex: 0 0 auto;
-    margin-top: 7px;
-    color: #edcd7a;
+.ot-footer-school > a i {
+    flex-shrink: 0;
+    margin-top: 6px;
+    color: #d6aa70;
+    font-size: 14px;
 }
 
-.ot-footer-links > a:hover {
-    color: #f4d98f;
+.ot-footer-school > a:hover {
+    color: #f0d5a7;
 }
+
+/* SCHOOL ADDRESSES */
+
+.ot-footer-school-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding-left: 19px;
+    color: #f4eee5;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    text-align: left !important;
+}
+
+.ot-footer-school-address i {
+    flex-shrink: 0;
+    margin-top: 6px;
+    color: #d6aa70;
+    font-size: 13px;
+}
+
+.ot-footer-school-address span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* ADMISSION LINK */
+
+.ot-footer-institution-admission {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #f0d5a7;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.ot-footer-institution-admission:hover {
+    color: #ffffff;
+}
+
+/* CONTACT DETAILS */
 
 .ot-footer-contact > p,
 .ot-footer-contact > a:not(.ot-footer-admission) {
@@ -1560,1228 +678,614 @@ a:focus-visible {
     gap: 12px;
     margin-bottom: 17px;
     color: #ffffff;
-    font-size: 17px;
-    line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: left;
     overflow-wrap: anywhere;
-        font-weight: 500;
-
-}
-
-.ot-contact-icon {
-    width: 35px;
-    height: 35px;
-    flex: 0 0 35px;
-    display: grid;
-    place-items: center;
-    color: #f4d98f;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(229,201,132,0.3);
-    border-radius: 3px 10px 3px 10px;
-        font-weight: 500;
-
 }
 
 .ot-footer-contact > a:not(.ot-footer-admission):hover {
-    color: #f4d98f;
+    color: #f0d5a7;
 }
 
+.ot-footer-contact > p span:last-child,
+.ot-footer-contact > a span:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* CONTACT ICON BOX */
+
+.ot-contact-icon {
+    width: 37px;
+    height: 37px;
+    min-width: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    color: #f0d5a7;
+    font-size: 15px;
+}
+
+/* ADMISSION BUTTON */
+
 .ot-footer-admission {
-    min-height: 47px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 100%;
+    padding: 13px 19px;
     margin-top: 7px;
-    padding: 11px 18px;
-    color: #173f27;
-    background: #f0cf7c;
-    border: 1px solid #f0cf7c;
-    border-radius: 3px 12px 3px 12px;
-    font-size: 14px;
+    border-radius: 5px;
+    background: #f0d5a7;
+    color: #194d32;
+    font-size: 16px;
     font-weight: 800;
-    transition: 0.3s ease;
-        font-weight: 500;
-
+    line-height: 1.5;
 }
 
 .ot-footer-admission:hover {
-    color: #ffffff;
-    background: #704326;
-    border-color: #e0c177;
+    background: #ffffff;
+    color: #784522;
 }
 
+/* ================= GOOGLE MAP ================= */
+
+.ot-footer-map {
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #e8eee7;
+    line-height: 0;
+}
+
+.ot-footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ================= COPYRIGHT ================= */
+
 .ot-footer-bottom {
-    position: relative;
-    min-height: 70px;
+    width: 100%;
+    padding: 17px max(24px, calc((100% - 1240px) / 2));
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px 24px;
-    padding: 17px max(4%, calc((100% - 1400px) / 2));
-    background: #102f1d;
-    border-top: 1px solid rgba(229,201,132,0.25);
-        font-weight: 500;
-
+    flex-wrap: wrap;
+    gap: 16px;
+    background: #103923;
+    border-top: 1px solid rgba(255,255,255,0.15);
 }
 
 .ot-footer-bottom p {
     color: #ffffff;
-    font-size: 13px;
-    line-height: 1.7;
-        font-weight: 500;
-
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
 }
 
 .ot-footer-motto {
     display: flex;
     align-items: center;
     gap: 8px;
-        font-weight: 500;
-
+    color: #f0d5a7 !important;
 }
 
 .ot-footer-motto i {
-    color: #f0cf7c;
-
+    color: #d6aa70;
 }
 
-.ot-back-top {
-    width: 39px;
-    height: 39px;
-    flex: 0 0 39px;
-    display: grid;
-    place-items: center;
-    color: #173f27;
-    background: #f0cf7c;
-    border-radius: 50%;
-    transition: 0.3s ease;
-        font-weight: 500;
+/* BACK TO TOP */
 
+.ot-back-top {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #a66a3c;
+    color: #ffffff;
 }
 
 .ot-back-top:hover {
-    color: #ffffff;
-    background: #80502f;
+    background: #ffffff;
+    color: #194d32;
 }
 
-/* =====================================================
-   TABLET VIEW: 769px–991px
-===================================================== */
+/* =========================================================
+   LARGE TABLETS AND SMALL LAPTOPS
+========================================================= */
 
-@media (max-width: 991px) {
-    .ot-topbar-inner,
-    .ot-header-inner,
-    .ot-hero-inner,
-    .ot-institution-grid,
-    .ot-featured-inner,
-    .ot-footer-inner {
-        width: 94%;
-    }
-
-    .ot-header-inner {
-        grid-template-columns: minmax(130px, 0.75fr) minmax(0, 1.5fr) minmax(210px, 1fr);
-        gap: 15px;
-        min-height: 125px;
-    }
-
-    .ot-logo-frame {
-        min-height: 78px;
-        padding: 6px;
-    }
-
-    .ot-header-overline {
-        font-size: 12px;
-        letter-spacing: 1.2px;
-    }
-
-    .ot-header-brand h2 {
-        font-size: 25px;
-    }
-
-    .ot-header-brand h2 span {
-        font-size: 0.64em;
-        letter-spacing: 1px;
-    }
-
-    .ot-header-brand > p {
-        font-size: 12px;
-    }
-
-    .ot-admission-button {
-        min-height: 78px;
-        gap: 8px;
-        padding: 9px;
-    }
-
-    .ot-admission-symbol {
-        width: 35px;
-        height: 35px;
-        flex-basis: 35px;
-        font-size: 17px;
-    }
-
-    .ot-admission-details small {
-        font-size: 8px;
-    }
-
-    .ot-admission-details strong {
-        font-size: 16px;
-    }
-
-    .ot-admission-details > span {
-        font-size: 10px;
-    }
-
-    .ot-admission-arrow {
-        display: none;
-    }
-
-    .ot-announcement-label {
-        padding-inline: 15px;
-        font-size: 13px;
-    }
-
-    .ot-announcement-group > span {
-        padding-inline: 17px;
-        font-size: 12px;
-    }
-
-    .ot-marquee-cta {
-        padding-inline: 12px;
-        font-size: 13px;
-    }
-
-    .ot-hero {
-        padding: 57px 0 70px;
-    }
-
-    .ot-hero-inner {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
-        gap: 26px;
-    }
-
-    .ot-hero-content h1 {
-        font-size: clamp(35px, 4.6vw, 46px);
-    }
-
-    .ot-hero-content > p {
-        font-size: 17px;
-    }
-
-    .ot-hero-eyebrow {
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
-
-    .ot-hero-visual {
-        height: 375px;
-    }
-
-    .ot-hero-image-label {
-        right: -2px;
-        bottom: 5px;
-        max-width: 225px;
-        gap: 8px;
-        padding: 9px;
-    }
-
-    .ot-image-label-icon {
-        width: 34px;
-        height: 34px;
-        flex-basis: 34px;
-    }
-
-    .ot-hero-image-label strong {
-        font-size: 11px;
-    }
-
-    .ot-hero-image-label small {
-        font-size: 10px;
-    }
-
-    .ot-hero-round-seal {
-        width: 68px;
-        height: 68px;
-    }
+@media (max-width: 1100px) {
 
     .ot-institution-grid {
-        gap: 15px;
+        gap: 18px;
     }
 
     .ot-school-card {
-        padding: 17px 14px 22px;
+        height: 455px;
     }
 
     .ot-school-logo {
-        height: 115px;
+        width: 145px;
+        height: 145px;
     }
 
-    .ot-school-card-content h3 {
-        font-size: 20px;
+    .ot-school-bottom {
+        left: 12px;
+        right: 12px;
+        bottom: 18px;
     }
 
-    .ot-school-card-content p {
-        font-size: 16px;
-    }
-
-    .ot-school-mini-heading {
-        font-size: 12px;
-    }
-
-    .ot-school-category {
-        font-size: 12px;
-        letter-spacing: 0;
-    }
-
-    .ot-featured-inner {
-        gap: 28px;
-    }
-
-    .ot-featured-content h2 {
-        font-size:28px;
-    }
-
-    .ot-featured-intro,
-    .ot-highlight-item p {
-        font-size: 17px;
-    }
-
-    .ot-highlight-item {
-        grid-template-columns: 42px minmax(0, 1fr);
-        gap: 11px;
-    }
-
-    .ot-highlight-icon {
-        width: 42px;
-        height: 42px;
-        font-size: 17px;
-    }
-
-    .ot-highlight-item h3 {
-        font-size: 17px;
+    .ot-school-bottom h3 {
+        font-size: 18px;
     }
 
     .ot-footer-inner {
+        gap: 26px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 35px 30px;
     }
 
     .ot-footer-brand {
         grid-column: 1 / -1;
-    }
-
-    .ot-footer-contact {
-        grid-column: 1 / -1;
-    }
-
-    .ot-footer-brand > p {
-        max-width: 700px;
-    }
-
-    .ot-footer-bottom {
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
+        max-width: 720px;
     }
 }
 
-/* =====================================================
-   TABLET PORTRAIT + LARGE MOBILE: 481px–768px
-===================================================== */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+
     .ot-topbar-inner {
-        flex-direction: column;
         justify-content: center;
-        gap: 8px;
-        padding-block: 9px;
     }
 
     .ot-topbar-info {
         justify-content: center;
-        gap: 6px 18px;
-    }
-
-    .ot-topbar-info a {
-        font-size: 15px;
     }
 
     .ot-topbar-right {
         justify-content: center;
     }
 
-    .ot-topbar-message {
-        display: none;
-    }
-
-    /* Two-column logo and admission row, centered title above */
-
-    .ot-header-inner {
-        width: 92%;
-        min-height: 0;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 17px 13px;
-        padding-block: 18px;
-    }
-
-    .ot-header-brand {
-        grid-column: 1 / -1;
-        grid-row: 1;
-    }
-
-    .ot-header-overline {
-        font-size: 12px;
-        letter-spacing: 1.5px;
-    }
-
-    .ot-header-brand h2 {
-        font-size: clamp(24px, 5.2vw, 32px);
-    }
-
-    .ot-header-brand h2 span {
-        font-size: 0.65em;
-        letter-spacing: 1.5px;
-    }
-
-    .ot-header-brand > p {
-        font-size: 13px;
-    }
-
-    .ot-main-logo {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .ot-logo-frame {
-        max-width: 200px;
-        min-height: 78px;
-    }
-
-    .ot-admission-button {
-        grid-column: 2;
-        grid-row: 2;
-        min-height: 78px;
-        padding: 9px;
-    }
-
-    .ot-admission-symbol {
-        width: 32px;
-        height: 32px;
-        flex-basis: 32px;
-        font-size: 15px;
-    }
-
-    .ot-admission-details small {
-        font-size: 8px;
-    }
-
-    .ot-admission-details strong {
-        font-size: 15px;
-    }
-
-    .ot-admission-details > span {
-        font-size: 10px;
-    }
-
-    /* Marquee stays beneath the complete header */
-
-    .ot-announcement {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        grid-template-rows: 36px 40px;
-    }
-
-    .ot-announcement-label {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        padding-inline: 4%;
-        font-size: 13px;
-    }
-
-    .ot-announcement-window {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .ot-announcement-track {
-        animation-duration: 30s;
-    }
-
-    .ot-announcement-group > span {
-        padding-inline: 15px;
-        font-size: 12px;
-    }
-
-    .ot-marquee-cta {
-        grid-column: 2;
-        grid-row: 2;
-        padding-inline: 10px;
-        font-size: 13px;
-    }
-
-    /* Hero */
-
-    .ot-hero {
-        padding: 47px 0 64px;
-    }
-
-    .ot-hero-inner {
-        width: 90%;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 39px;
-    }
-
-    .ot-hero-content {
-        text-align: center;
-    }
-
-    .ot-hero-eyebrow {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 17px;
-        font-size: 15px;
-    }
-
-    .ot-eyebrow-line {
-        width: 19px;
-    }
-
-    .ot-hero-content h1 {
-        max-width: 650px;
-        margin-inline: auto;
-        font-size: clamp(36px, 7.5vw, 51px);
-        line-height: 1.2;
-    }
-
-    .ot-hero-content > p {
-        max-width: 620px;
-        margin: 19px auto 0;
-        font-size: 17px;
-        text-align: justify;
-    }
-
-    .ot-hero-buttons {
-        justify-content: center;
-        gap: 12px;
-        margin-top: 25px;
-    }
-
-    .ot-btn-primary,
-    .ot-btn-outline {
-        min-height: 49px;
-        padding: 11px 15px;
-        font-size: 13px;
-    }
-
-    .ot-hero-signature {
-        justify-content: center;
-        margin-top: 27px;
-        padding-top: 18px;
-        text-align: left;
-    }
-
-    .ot-hero-visual {
-        width: 100%;
-        max-width: 510px;
-        height: clamp(320px, 72vw, 420px);
-    }
-
-    .ot-hero-image-frame {
-        inset: 13px 8px 15px 12px;
-        border-radius: 110px 8px 100px 8px;
-    }
-
-    .ot-hero-image-collage {
-        gap: 9px;
-        padding: 8px;
-    }
-
-    .ot-hero-photo {
-        border-width: 3px;
-    }
-
-    .ot-hero-photo-main {
-        border-radius: 85px 4px 4px 4px;
-    }
-
-    .ot-hero-photo-top {
-        border-radius: 4px 45px 4px 4px;
-    }
-
-    .ot-hero-photo-bottom {
-        border-radius: 4px 4px 45px 4px;
-    }
-
-    .ot-photo-caption {
-        gap: 7px;
-        padding: 12px 8px;
-        font-size: 11px;
-    }
-
-    .ot-hero-image-label {
-        right: 0;
-        bottom: 1px;
-        max-width: 230px;
-        padding: 9px;
-    }
-
-    .ot-hero-round-seal {
-        width: 65px;
-        height: 65px;
-    }
-
-    /* Institution cards */
-
     .ot-institutions {
-        padding: 60px 0 70px;
-    }
-
-    .ot-section-heading {
-        margin-bottom: 32px;
-    }
-
-    .ot-section-overline {
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
-
-    .ot-section-heading h2 {
-        font-size: clamp(30px, 6.3vw, 30px);
-    }
-
-    .ot-section-heading > p {
-        font-size: 17px;
-        text-align: center;
+        padding: 42px 18px 48px;
+        background-position: center;
     }
 
     .ot-institution-grid {
-        width: 90%;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 17px;
+        gap: 20px;
     }
 
     .ot-school-card {
-        padding: 17px 14px 21px;
+        height: 445px;
     }
 
     .ot-school-card:last-child {
         grid-column: 1 / -1;
-        width: calc(50% - 9px);
+        width: calc(50% - 10px);
         justify-self: center;
     }
 
     .ot-school-logo {
-        height: 120px;
-        margin-block: 13px 16px;
+        width: 145px;
+        height: 145px;
     }
-
-    .ot-school-mini-heading {
-        font-size:12px;
-        letter-spacing: 0;
-    }
-
-    .ot-school-card-content h3 {
-        font-size: 20px;
-    }
-
-    .ot-school-card-content p {
-        font-size: 17px;
-        line-height: 1.75;
-    }
-
-    .ot-school-link {
-        font-size: 13px;
-    }
-
-    /* Video and feature text */
-
-    .ot-featured-section {
-        padding: 60px 0;
-    }
-
-    .ot-featured-inner {
-        width: 90%;
-        grid-template-columns: minmax(0, 1fr);
-        gap: 37px;
-    }
-
-    .ot-featured-content h2 {
-        font-size: clamp(32px, 6.5vw, 41px);
-    }
-
-    .ot-featured-intro,
-    .ot-highlight-item p {
-        font-size: 17px;
-    }
-
-    .ot-highlight-list {
-        gap: 17px;
-    }
-
-    .ot-highlight-item {
-        grid-template-columns: 45px minmax(0, 1fr);
-    }
-
-    .ot-highlight-icon {
-        width: 44px;
-        height: 44px;
-    }
-
-    /* Footer */
 
     .ot-footer-inner {
-        width: 90%;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 32px 24px;
-        padding: 45px 0 38px;
-    }
-
-    .ot-footer-brand,
-    .ot-footer-contact {
-        grid-column: 1 / -1;
-    }
-
-    .ot-footer-brand > p {
-        font-size: 17px;
-    }
-
-    .ot-footer-links h3,
-    .ot-footer-contact h3 {
-        font-size: 21px;
-    }
-
-    .ot-footer-links > a,
-    .ot-footer-contact > p,
-    .ot-footer-contact > a:not(.ot-footer-admission) {
-        font-size: 16px;
+        width: calc(100% - 40px);
+        gap: 28px;
+        padding: 42px 0;
     }
 
     .ot-footer-bottom {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px 18px;
-        padding: 18px 48px 18px 5%;
-        text-align: center;
+        padding: 17px 20px;
     }
 
-    .ot-footer-bottom p {
-        font-size: 13px;
-    }
-
-    .ot-back-top {
-        position: absolute;
-        right: 10px;
-        bottom: 14px;
-        width: 33px;
-        height: 33px;
+    .ot-footer-map {
+        height: 195px;
     }
 }
 
-/* =====================================================
-   MOBILE VIEW: 481px AND BELOW
-===================================================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
-@media (max-width: 480px) {
-    .ot-topbar-inner {
-        width: 94%;
-    }
+@media (max-width: 600px) {
 
-    .ot-topbar-info {
-        justify-content: center;
-        gap: 6px 12px;
-    }
-
-    .ot-topbar-info a {
+    body {
         font-size: 15px;
     }
 
-    .ot-header-inner {
-        width: 92%;
-        gap: 14px 9px;
-        padding-block: 16px;
-    }
-
-    .ot-header-overline {
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
-
-    .ot-header-brand h2 {
-        font-size: clamp(21px, 6vw, 26px);
-        letter-spacing: 0;
-    }
-
-    .ot-header-brand h2 span {
-        font-size: 0.62em;
-        letter-spacing: 0.8px;
-    }
-
-    .ot-header-brand > p {
-        font-size: 12px;
-    }
-
-    .ot-header-ornament {
-        margin-top: 5px;
-    }
-
-    .ot-logo-frame {
-        min-height: 67px;
-        padding: 5px;
-        outline-offset: 2px;
-    }
-
-    .ot-admission-button {
-        min-height: 68px;
-        gap: 6px;
-        padding: 7px;
-    }
-
-    .ot-admission-symbol {
-        width: 27px;
-        height: 27px;
-        flex-basis: 27px;
-        font-size: 13px;
-    }
-
-    .ot-admission-details small {
-        font-size: 7px;
-        letter-spacing: 0;
-    }
-
-    .ot-admission-details strong {
-        font-size: 12px;
-    }
-
-    .ot-admission-details > span {
-        font-size: 9px;
-    }
-
-    .ot-announcement {
-        grid-template-rows: 34px 38px;
-    }
-
-    .ot-announcement-label {
-        font-size: 13px;
-    }
-
-    .ot-announcement-group > span {
-        gap: 7px;
-        padding-inline: 12px;
-        font-size: 14px;
-    }
-
-    .ot-marquee-cta {
-        gap: 5px;
-        padding-inline: 7px;
-        font-size:13px;
-    }
-
-    .ot-hero {
-        padding: 40px 0 53px;
-    }
-
-    .ot-hero-inner {
-        width: 90%;
-        gap: 34px;
-    }
-
-    .ot-hero-content h1 {
-        font-size: clamp(32px, 8.5vw, 39px);
-        letter-spacing: -0.5px;
-    }
-
-    .ot-hero-content > p {
-        margin-top: 17px;
-        font-size: 17px;
+    p {
+        font-size: 15px;
         line-height: 1.75;
     }
 
-    .ot-hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
+    .ot-topbar-inner {
+        width: calc(100% - 24px);
+        padding-block: 10px;
         gap: 10px;
     }
 
-    .ot-btn-primary,
-    .ot-btn-outline {
+    .ot-topbar-info {
         width: 100%;
-        min-height: 48px;
-        font-size: 14px;
+        justify-content: center;
+        gap: 7px 14px;
     }
 
-    .ot-hero-signature {
-        margin-top: 23px;
-    }
-
-    .ot-hero-visual {
-        height: clamp(265px, 78vw, 320px);
-    }
-
-    .ot-hero-image-frame {
-        inset: 9px 5px 12px 8px;
-    }
-
-    .ot-hero-image-collage {
-        gap: 7px;
-        padding: 7px;
-    }
-
-    .ot-photo-caption {
-        gap: 6px;
-        padding: 9px 6px;
-        font-size: 10px;
-    }
-
-    .ot-photo-caption i {
+    .ot-topbar-info a {
         font-size: 13px;
     }
 
-    .ot-hero-image-label {
-        right: 0;
-        bottom: 0;
-        max-width: 195px;
-        gap: 7px;
-        padding: 7px;
+    .ot-topbar-right {
+        width: 100%;
+        gap: 10px;
     }
 
-    .ot-image-label-icon {
-        width: 29px;
-        height: 29px;
-        flex-basis: 29px;
+    .ot-topbar-message {
         font-size: 13px;
+        text-align: center;
     }
 
-    .ot-hero-image-label strong {
-        font-size: 10px;
-    }
-
-    .ot-hero-image-label small {
-        font-size: 9px;
-    }
-
-    .ot-hero-round-seal {
-        top: -2px;
-        right: 0;
-        width: 55px;
-        height: 55px;
-        border-width: 2px;
-    }
-
-    .ot-hero-round-seal i {
-        font-size: 12px;
-    }
-
-    .ot-hero-round-seal span {
-        font-size: 6px;
+    .ot-topbar-social a {
+        width: 28px;
+        height: 28px;
     }
 
     .ot-institutions {
-        padding: 50px 0 58px;
+        padding: 34px 14px 40px;
+        background-position: 62% center;
     }
 
     .ot-section-heading {
-        width: 90%;
+        margin-bottom: 25px;
     }
 
     .ot-section-overline {
-        gap: 6px;
-        font-size: 15px;
-        letter-spacing: 0.5px;
+        gap: 7px;
+        font-size: 14px;
+        letter-spacing: 0.6px;
     }
 
     .ot-section-heading h2 {
-        font-size: 20px;
+        font-size: 25px;
+        line-height: 1.3;
     }
 
-    .ot-section-heading > p {
-        font-size: 16px;
+    .ot-section-heading p {
+        font-size: 15px;
+        line-height: 1.75;
+        text-align: justify;
+    }
+
+    .ot-heading-ornament {
+        margin-top: 13px;
+    }
+
+    .ot-heading-ornament span {
+        width: 30px;
     }
 
     .ot-institution-grid {
-        width: 90%;
+        width: 100%;
         grid-template-columns: minmax(0, 1fr);
-        gap: 18px;
+        gap: 20px;
+        max-width: 440px;
     }
 
     .ot-school-card,
     .ot-school-card:last-child {
         width: 100%;
+        height: 440px;
         grid-column: auto;
-        padding: 19px;
+        justify-self: stretch;
     }
 
-    .ot-school-category {
-        font-size: 10px;
-    }
-
-    .ot-school-logo {
-        height: 140px;
-    }
-
-    .ot-school-mini-heading {
-        font-size: 12px;
-    }
-
-    .ot-school-card-content h3 {
-        font-size: 22px;
-    }
-
-    .ot-school-card-content p {
-        font-size: 17px;
-        line-height: 1.75;
-    }
-
-    .ot-school-link {
-        padding-top: 18px;
-        font-size: 14px;
-    }
-
-    .ot-featured-section {
-        padding: 49px 0;
-    }
-
-    .ot-featured-inner {
-        gap: 30px;
-    }
-
-    .ot-video-label {
-        font-size: 15px;
-        letter-spacing: 0.6px;
-    }
-
-    .ot-video-caption {
-        gap: 10px;
-        padding: 11px;
-    }
-
-    .ot-video-caption-icon {
-        width: 35px;
-        height: 35px;
-        flex-basis: 35px;
-        font-size: 15px;
-    }
-
-    .ot-video-caption strong {
-        font-size: 14px;
-    }
-
-    .ot-video-caption small {
-        font-size: 14px;
-    }
-
-    .ot-featured-eyebrow {
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
-
-    .ot-featured-content h2 {
-        font-size:25px;
-    }
-
-    .ot-featured-intro,
-    .ot-highlight-item p {
-        font-size: 17px;
-        line-height: 1.75;
-    }
-
-    .ot-highlight-list {
-        gap: 17px;
-    }
-
-    .ot-highlight-item {
-        grid-template-columns: 40px minmax(0, 1fr);
-        gap: 10px;
-    }
-
-    .ot-highlight-icon {
-        width: 39px;
-        height: 39px;
-        font-size: 16px;
-    }
-
-    .ot-highlight-item h3 {
-        font-size: 17px;
-    }
-
-    .ot-featured-cta {
-        width: 100%;
-        padding-inline: 10px;
-        font-size: 15px;
-    }
-
-    .ot-footer-inner {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 29px;
-        padding: 40px 0 34px;
-    }
-
-    .ot-footer-brand,
-    .ot-footer-contact {
-        grid-column: auto;
-    }
-
-    .ot-footer-logo {
-        max-width: 210px;
-        min-height: 75px;
-    }
-
-    .ot-footer-brand h3 {
+    .ot-school-number {
+        top: 12px;
+        left: 12px;
+        width: 48px;
+        height: 46px;
         font-size: 21px;
     }
 
+    .ot-school-bottom {
+        left: 12px;
+        right: 12px;
+        bottom: 18px;
+    }
+
+    .ot-school-logo {
+        width: 145px;
+        height: 145px;
+        max-width: 65%;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .ot-school-bottom h3 {
+        padding: 9px 10px;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .ot-school-link {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    .ot-footer p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .ot-footer-inner {
+        width: calc(100% - 32px);
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 35px 0;
+    }
+
+    .ot-footer-brand {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .ot-footer-logo {
+        margin-bottom: 16px;
+    }
+
+    .ot-footer-logo img {
+        width: 180px;
+    }
+
+    .ot-footer-brand h3 {
+        font-size: 20px;
+    }
+
     .ot-footer-brand > p {
-        font-size: 17px;
+        font-size: 15px;
+        margin-bottom: 18px;
     }
 
-    .ot-footer-links h3,
-    .ot-footer-contact h3 {
-        margin-bottom: 19px;
-        font-size: 22px;
+    .ot-footer-social {
+        gap: 8px;
     }
 
-    .ot-footer-links > a,
+    .ot-footer-social a {
+        width: 39px;
+        height: 39px;
+        font-size: 15px;
+    }
+
+    .ot-footer-links > h3,
+    .ot-footer-contact > h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .ot-footer-school {
+        margin-bottom: 14px;
+        padding-bottom: 13px;
+    }
+
+    .ot-footer-school > a {
+        font-size: 15px;
+    }
+
+    .ot-footer-school-address {
+        padding-left: 17px;
+        font-size: 14px !important;
+    }
+
+    .ot-footer-institution-admission {
+        font-size: 15px;
+    }
+
     .ot-footer-contact > p,
     .ot-footer-contact > a:not(.ot-footer-admission) {
-        font-size: 16px;
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .ot-contact-icon {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+    }
+
+    .ot-footer-admission {
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .ot-footer-map {
+        height: 175px;
     }
 
     .ot-footer-bottom {
-        gap: 8px;
-        padding: 17px 42px 17px 4%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 11px;
+        padding: 18px 14px;
     }
 
     .ot-footer-bottom p {
-        width: 100%;
-        font-size: 12px;
+        font-size: 13px;
+        text-align: center;
     }
 
     .ot-footer-motto {
         justify-content: center;
-        gap: 6px;
-    }
-
-    .ot-back-top {
-        right: 6px;
-        bottom: 14px;
-        width: 30px;
-        height: 30px;
-        flex-basis: 30px;
+        flex-wrap: wrap;
     }
 }
 
-/* =====================================================
-   EXTRA SMALL MOBILE: 350px AND BELOW
-===================================================== */
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
+
+    .ot-topbar-inner {
+        width: calc(100% - 20px);
+    }
+
     .ot-topbar-info {
         flex-direction: column;
         align-items: center;
-        gap: 4px;
+        gap: 5px;
     }
 
-    .ot-header-inner {
-        gap: 12px 7px;
+    .ot-topbar-info a {
+        font-size: 12px;
     }
 
-    .ot-header-brand h2 {
-        font-size: 20px;
+    .ot-institutions {
+        padding: 30px 12px 34px;
     }
 
-    .ot-header-brand h2 span {
-        font-size: 0.6em;
-        letter-spacing: 0.2px;
+    .ot-section-heading h2 {
+        font-size: 22px;
     }
 
-    .ot-header-brand > p {
-        font-size: 11px;
+    .ot-section-overline {
+        font-size: 12px;
     }
 
-    .ot-logo-frame {
-        min-height: 57px;
-        padding: 4px;
+    .ot-school-card,
+    .ot-school-card:last-child {
+        height: 415px;
     }
 
-    .ot-admission-button {
-        min-height: 61px;
-        gap: 4px;
-        padding: 5px;
+    .ot-school-logo {
+        width: 130px;
+        height: 130px;
     }
 
-    .ot-admission-symbol {
-        width: 23px;
-        height: 23px;
-        flex-basis: 23px;
-        font-size: 11px;
+    .ot-school-bottom h3 {
+        font-size: 16px;
     }
 
-    .ot-admission-details small {
-        font-size: 6px;
-    }
-
-    .ot-admission-details strong {
-        font-size: 11px;
-    }
-
-    .ot-admission-details > span {
-        font-size: 8px;
-    }
-
-    .ot-announcement {
-        grid-template-rows: 33px 36px;
-    }
-
-    .ot-announcement-label {
-        padding-inline: 4%;
+    .ot-school-link {
         font-size: 13px;
+        padding: 8px 13px;
     }
 
-    .ot-marquee-cta {
-        gap: 4px;
-        padding-inline: 5px;
-        font-size: 13px;
+    .ot-footer-inner {
+        width: calc(100% - 26px);
+        gap: 26px;
+        padding: 30px 0;
     }
 
-    .ot-hero-content h1 {
-        font-size: 30px;
+    .ot-footer-logo img {
+        width: 165px;
     }
 
-    .ot-hero-visual {
-        height: 250px;
+    .ot-footer-brand h3 {
+        font-size: 19px;
     }
 
-    .ot-hero-image-label {
-        max-width: 168px;
+    .ot-footer-links > h3,
+    .ot-footer-contact > h3 {
+        font-size: 19px;
     }
 
-    .ot-hero-image-label strong {
-        font-size: 9px;
+    .ot-footer-school > a {
+        font-size: 14px;
     }
 
-    .ot-hero-image-label small {
-        font-size: 8px;
+    .ot-footer-school-address {
+        font-size: 13px !important;
     }
 
-    .ot-hero-round-seal {
-        width: 49px;
-        height: 49px;
+    .ot-footer-map {
+        height: 155px;
+    }
+}
+
+/* =========================================================
+   EXTRA-SMALL MOBILE
+========================================================= */
+
+@media (max-width: 350px) {
+
+    .ot-institutions {
+        padding-inline: 10px;
     }
 
     .ot-section-heading h2 {
         font-size: 20px;
     }
 
-    .ot-school-card {
-        padding: 15px;
+    .ot-school-card,
+    .ot-school-card:last-child {
+        height: 395px;
     }
 
-    .ot-school-card-content h3 {
-        font-size: 20px;
+    .ot-school-bottom {
+        left: 9px;
+        right: 9px;
+        bottom: 14px;
     }
 
-    .ot-featured-content h2 {
-        font-size: 25px;
+    .ot-school-logo {
+        width: 118px;
+        height: 118px;
+        margin-bottom: 10px;
+    }
+
+    .ot-school-bottom h3 {
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .ot-school-link {
+        font-size: 12px;
+        padding: 7px 11px;
+    }
+
+    .ot-footer-inner {
+        width: calc(100% - 22px);
+    }
+
+    .ot-footer-logo img {
+        width: 150px;
+    }
+
+    .ot-footer-school-address {
+        padding-left: 13px;
+        font-size: 12px !important;
+    }
+
+    .ot-footer-admission {
+        padding: 11px 13px;
+        font-size: 14px;
+    }
+
+    .ot-footer-map {
+        height: 140px;
     }
 }
 
@@ -2792,11 +1296,12 @@ a:focus-visible {
         scroll-behavior: auto;
     }
 
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+    .ot-school-building,
+    .ot-school-logo,
+    .ot-school-link,
+    .ot-school-link i,
+    .ot-topbar-social a,
+    .ot-footer a {
+        transition: none;
     }
 }
