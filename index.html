@@ -7,6 +7,7 @@
 
     <title>Olive Tree Group of Schools | Chennai</title>
     <meta name="description" content="Discover Olive Tree Group of Schools in Chennai, nurturing academic excellence, strong values and future-ready learners.">
+    <link rel="shortcut icon" type="image/x-icon" href="image/grp.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -276,6 +277,652 @@
 
 </footer>
 
+<!-- OLIVE TREE PROFESSIONAL CHATBOT -->
+<div class="ot-assistant" id="otAssistant">
 
+    <div class="ot-chat-panel" id="otChatPanel" aria-label="School assistant">
+
+        <div class="ot-chat-header">
+            <div class="ot-avatar">🤖</div>
+
+            <div class="ot-header-info">
+                <strong>Olive Tree Assistant</strong>
+                <span><i></i> Your School Guide</span>
+            </div>
+
+            <button type="button" id="otCloseChat"
+                    aria-label="Close chatbot">×</button>
+        </div>
+
+        <div class="ot-chat-content" id="otChatContent" aria-live="polite">
+
+            <div class="ot-bot-message">
+                <div class="ot-message-label">OLIVE TREE ASSISTANT</div>
+                Hello and welcome! 🌿
+
+                I'm your virtual school guide for Olive Tree Group of Schools.
+                I can help you explore our schools, admission process,
+                campus locations and contact details.
+
+                How may I assist you today?
+            </div>
+
+            <div class="ot-section-label">EXPLORE OUR SERVICES</div>
+
+            <div class="ot-quick-grid">
+                <button type="button" data-question="about group">
+                    <span>🏫</span>
+                    Our Schools
+                </button>
+
+                <button type="button" data-question="admission">
+                    <span>📝</span>
+                    Admissions
+                </button>
+
+                <button type="button" data-question="locations">
+                    <span>📍</span>
+                    Locations
+                </button>
+
+                <button type="button" data-question="contact">
+                    <span>☎️</span>
+                    Contact Us
+                </button>
+            </div>
+
+            <div class="ot-section-label">POPULAR QUESTIONS</div>
+
+            <div class="ot-suggestions">
+                <button type="button" data-question="chairman">
+                    Who is the chairman?
+                </button>
+
+                <button type="button" data-question="classes">
+                    Which classes are offered?
+                </button>
+
+                <button type="button" data-question="fees">
+                    How can I enquire about fees?
+                </button>
+
+                <button type="button" data-question="campus visit">
+                    How can I arrange a campus visit?
+                </button>
+            </div>
+
+        </div>
+
+        <div class="ot-chat-input-area">
+            <form id="otChatForm">
+                <input type="text"
+                       id="otChatInput"
+                       placeholder="Ask us anything..."
+                       aria-label="Type your question"
+                       autocomplete="off"
+                       required>
+
+                <button type="submit" aria-label="Send message">
+                    ➤
+                </button>
+            </form>
+        </div>
+
+        <div class="ot-chat-footer">
+            <span class="ot-footer-leaf">✦</span>
+            OLIVE TREE GROUP OF SCHOOLS
+        </div>
+    </div>
+
+    <!-- FLOATING ROBOT -->
+    <button type="button"
+            class="ot-chat-launcher"
+            id="otOpenChat"
+            aria-label="Chat with Olive Tree Assistant">
+
+        <span class="ot-launcher-robot">🤖</span>
+
+        <span class="ot-launcher-label">Ask us!</span>
+
+        <span class="ot-online-indicator"></span>
+    </button>
+
+</div>
+
+<script>
+    (() => {
+    "use strict";
+
+    const panel = document.getElementById("otChatPanel");
+    const openButton = document.getElementById("otOpenChat");
+    const closeButton = document.getElementById("otCloseChat");
+    const content = document.getElementById("otChatContent");
+    const form = document.getElementById("otChatForm");
+    const input = document.getElementById("otChatInput");
+
+    if (!panel || !openButton || !closeButton || !content || !form || !input) {
+        return;
+    }
+
+    const schools = [
+        {
+            name: "Olive Tree Global School",
+            address:
+                "200ft Inner Ring Road, Manjambakkam, Madhavaram, Chennai – 600060",
+            phone: ["7550010012", "7550010016"],
+            email: "admissions@olivetreeglobal.in",
+            website:
+                "https://priyadharshini-082001.github.io/olivetreeglobalschool/index.html",
+            admission:
+                "https://priyadharshini-082001.github.io/olivetreeglobalschool/admission-enquiry.html",
+            grades:
+                "The school website lists Primary, Middle and Senior Secondary learning stages."
+        },
+        {
+            name: "Olive Tree The Future School",
+            address:
+                "Vijay Skyline, East Main Road, Welcome Colony, Anna Nagar, Chennai – 600101",
+            phone: ["7550010015"],
+            email: "admission@olivetreefuture.in",
+            website:
+                "https://priyadharshini-082001.github.io/futureschool/index.html",
+            admission:
+                "https://priyadharshini-082001.github.io/futureschool/admission.html",
+            grades:
+                "The website describes learning from preschool through Grade 7."
+        },
+        {
+            name: "Olive Tree International School",
+            address:
+                "No. 25/33, TVK 2nd Link Road, Erukkanchery, Thiruvalluvar Nagar, Kodungaiyur, Chennai – 600118",
+            phone: ["7550010013"],
+            email: "info@olivetreeintl.in",
+            website:
+                "https://priyadharshini-082001.github.io/olivetreeinternational/",
+            admission:
+                "https://priyadharshini-082001.github.io/olivetreeinternational/admission.html",
+            grades:
+                "The website describes a kindergarten programme."
+        }
+    ];
+
+    let welcomeTimer;
+
+    function scrollToBottom() {
+        content.scrollTop = content.scrollHeight;
+    }
+
+    function addMessage(message, type = "ot-bot-message") {
+        const element = document.createElement("div");
+        element.className = type;
+        element.textContent = message;
+        content.appendChild(element);
+        scrollToBottom();
+        return element;
+    }
+
+    function addLinks(items) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "ot-answer-links";
+
+        items.forEach(item => {
+            const link = document.createElement("a");
+            link.className = "ot-answer-link";
+            link.href = item.url;
+            link.textContent = item.label;
+
+            if (item.external) {
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+            }
+
+            wrapper.appendChild(link);
+        });
+
+        content.appendChild(wrapper);
+        scrollToBottom();
+    }
+
+    function showSchools() {
+        addMessage(
+            "Yes! Olive Tree is a group of three school institutions. " +
+            "Choose a school to explore its website, campus information and admission enquiry."
+        );
+
+        addLinks(schools.map(school => ({
+            label: "🌿 " + school.name + " — Visit Website",
+            url: school.website,
+            external: true
+        })));
+    }
+
+    function showAdmission() {
+        addMessage(
+            "Which school are you interested in? Select the relevant admission page. " +
+            "Each link opens that school's own admission enquiry page."
+        );
+
+        addLinks(schools.map(school => ({
+            label: "📝 " + school.name + " — Admission Enquiry",
+            url: school.admission,
+            external: true
+        })));
+    }
+
+    function showLocations() {
+        addMessage(
+            "Here are the addresses and contact details for all three campuses."
+        );
+
+        schools.forEach(school => {
+            addMessage(
+                school.name + "\n\n" +
+                "📍 Address: " + school.address + "\n\n" +
+                "☎ Phone: " +
+                school.phone.map(number => "+91 " + number).join(" / ") +
+                "\n\n✉ Email: " + school.email
+            );
+
+            addLinks([
+                {
+                    label: "📍 Get Directions",
+                    url: "https://www.google.com/maps/search/?api=1&query=" +
+                        encodeURIComponent(school.address),
+                    external: true
+                },
+                {
+                    label: "🌐 Visit " + school.name,
+                    url: school.website,
+                    external: true
+                }
+            ]);
+        });
+    }
+
+    function showContact() {
+        addMessage(
+            "Please choose the school you would like to contact. " +
+            "You can call the campus, email the school or open its website."
+        );
+
+        schools.forEach(school => {
+            addMessage(
+                school.name + "\n\n" +
+                "☎ " + school.phone.map(number => "+91 " + number).join(" / ") +
+                "\n✉ " + school.email
+            );
+
+            addLinks([
+                {
+                    label: "☎ Call " + school.name,
+                    url: "tel:+91" + school.phone[0]
+                },
+                {
+                    label: "✉ Email the School",
+                    url: "mailto:" + school.email
+                },
+                {
+                    label: "🌐 Visit School Website",
+                    url: school.website,
+                    external: true
+                }
+            ]);
+        });
+    }
+
+    function showChairman() {
+        addMessage(
+            "Dr. P. Isaac Livingstone Chairman Olive Tree Group of Schools. " 
+        );
+
+        addLinks([
+            {
+                label: "☎ Contact School Offices",
+                url: "#",
+                action: "contact"
+            }
+        ]);
+    }
+
+    function showFees() {
+        addMessage(
+            "For current tuition fees, transport charges and other applicable fees, " +
+            "please contact the relevant school office directly. Fees may differ by school and class."
+        );
+
+        addLinks(schools.map(school => ({
+            label: "Enquire about fees — " + school.name,
+            url: "mailto:" + school.email +
+                "?subject=" + encodeURIComponent("School Fees Enquiry")
+        })));
+    }
+
+    function showCampusVisit() {
+        addMessage(
+            "We recommend contacting the campus before visiting so the school team " +
+            "can guide you about visit timings and availability."
+        );
+
+        addLinks(schools.map(school => ({
+            label: "Arrange a Visit — " + school.name,
+            url: "tel:+91" + school.phone[0]
+        })));
+    }
+
+    function showClasses() {
+        addMessage(
+            "Our schools have different learning stages:\n\n" +
+            "• Olive Tree Global School: Primary, Middle and Senior Secondary stages are listed on its website.\n\n" +
+            "• Olive Tree The Future School: Preschool through Grade 7 is described on its website.\n\n" +
+            "• Olive Tree International School: Kindergarten programme.\n\n" +
+            "Please contact your preferred campus to confirm current classes and admissions availability."
+        );
+
+        addLinks(schools.map(school => ({
+            label: "Explore " + school.name,
+            url: school.website,
+            external: true
+        })));
+    }
+
+    function handleQuestion(question) {
+        const q = question.toLowerCase().trim();
+
+        if (!q) return;
+
+        addMessage(question, "ot-user-message");
+
+        // GROUP INFORMATION
+        if (
+            q.includes("group") ||
+            q.includes("institution") ||
+            q.includes("three school") ||
+            q.includes("our schools") ||
+            q.includes("about olive tree")
+        ) {
+            showSchools();
+            return;
+        }
+
+        // ADMISSIONS
+        if (
+            q.includes("admission") ||
+            q.includes("apply") ||
+            q.includes("application") ||
+            q.includes("enrol") ||
+            q.includes("enroll") ||
+            q.includes("register")
+        ) {
+            showAdmission();
+            return;
+        }
+
+        // CHAIRMAN / MANAGEMENT
+        if (
+            q.includes("chairman") ||
+            q.includes("chairperson") ||
+            q.includes("founder") ||
+            q.includes("management")
+        ) {
+            showChairman();
+            return;
+        }
+
+        // CAMPUS VISITS
+        if (
+            q.includes("campus visit") ||
+            q.includes("visit the school") ||
+            q.includes("visit school") ||
+            q.includes("school tour")
+        ) {
+            showCampusVisit();
+            return;
+        }
+
+        // FEES
+        if (
+            q.includes("fee") ||
+            q.includes("fees") ||
+            q.includes("tuition") ||
+            q.includes("payment")
+        ) {
+            showFees();
+            return;
+        }
+
+        // CLASSES / GRADE LEVELS
+        if (
+            q.includes("class") ||
+            q.includes("grade") ||
+            q.includes("standard") ||
+            q.includes("kindergarten") ||
+            q.includes("curriculum")
+        ) {
+            showClasses();
+            return;
+        }
+
+        // LOCATION / CONTACT
+        if (
+            q.includes("location") ||
+            q.includes("address") ||
+            q.includes("where") ||
+            q.includes("direction") ||
+            q.includes("contact") ||
+            q.includes("phone") ||
+            q.includes("number") ||
+            q.includes("email") ||
+            q.includes("telephone")
+        ) {
+            if (
+                q.includes("global") ||
+                q.includes("future") ||
+                q.includes("international")
+            ) {
+                const school = schools.find(s =>
+                    q.includes(s.name.toLowerCase().replace("olive tree ", ""))
+                );
+
+                if (school) {
+                    addMessage(
+                        school.name + "\n\n" +
+                        "📍 " + school.address + "\n\n" +
+                        "☎ " + school.phone.map(n => "+91 " + n).join(" / ") +
+                        "\n✉ " + school.email
+                    );
+
+                    addLinks([
+                        {
+                            label: "📍 Get Directions",
+                            url: "https://www.google.com/maps/search/?api=1&query=" +
+                                encodeURIComponent(school.address),
+                            external: true
+                        },
+                        {
+                            label: "☎ Call School",
+                            url: "tel:+91" + school.phone[0]
+                        },
+                        {
+                            label: "🌐 Visit School Website",
+                            url: school.website,
+                            external: true
+                        }
+                    ]);
+                    return;
+                }
+            }
+
+            if (q.includes("email")) {
+                showContact();
+            } else {
+                showLocations();
+            }
+            return;
+        }
+
+        // SCHOOL-SPECIFIC WEBSITE REDIRECTS
+        const school = schools.find(school => {
+            const name = school.name.toLowerCase();
+
+            return q.includes(name) ||
+                (school.name.includes("Global") && q.includes("global school")) ||
+                (school.name.includes("Future") && q.includes("future school")) ||
+                (school.name.includes("International") && q.includes("international school"));
+        });
+
+        if (school) {
+            addMessage(
+                "Certainly! Here is the official website for " +
+                school.name + ". You can also visit its admission enquiry page."
+            );
+
+            addLinks([
+                {
+                    label: "🌐 Visit " + school.name,
+                    url: school.website,
+                    external: true
+                },
+                {
+                    label: "📝 Admission Enquiry",
+                    url: school.admission,
+                    external: true
+                }
+            ]);
+            return;
+        }
+
+        // GREETINGS
+        if (
+            q.includes("hello") ||
+            q === "hi" ||
+            q.startsWith("hi ") ||
+            q.includes("good morning") ||
+            q.includes("good afternoon") ||
+            q.includes("good evening")
+        ) {
+            addMessage(
+                "Hello! Welcome to Olive Tree Group of Schools. 🌿 " +
+                "I can guide you to our school websites, admission pages, " +
+                "campus addresses and contact details."
+            );
+
+            addLinks([
+                {
+                    label: "🏫 Explore Our Schools",
+                    url: "#",
+                    action: "schools"
+                },
+                {
+                    label: "📝 Admission Enquiry",
+                    url: "#",
+                    action: "admission"
+                },
+                {
+                    label: "📍 Locations & Contact",
+                    url: "#",
+                    action: "locations"
+                }
+            ]);
+            return;
+        }
+
+        // DEFAULT RESPONSE
+        addMessage(
+            "I'd be happy to help! Please try one of these questions:\n\n" +
+            "• Is Olive Tree a group of institutions?\n" +
+            "• How can I apply for admission?\n" +
+            "• Where are the three schools located?\n" +
+            "• What are the school contact numbers?\n" +
+            "• Who is the chairman?\n" +
+            "• Which classes are offered?"
+        );
+
+        addLinks([
+            {
+                label: "🏫 Explore Our Schools",
+                url: "#",
+                action: "schools"
+            },
+            {
+                label: "📝 Admission Enquiry",
+                url: "#",
+                action: "admission"
+            }
+        ]);
+    }
+
+    // Handle links that trigger chatbot actions
+    content.addEventListener("click", event => {
+        const link = event.target.closest("a[data-action]");
+
+        if (!link) return;
+
+        event.preventDefault();
+
+        const action = link.dataset.action;
+
+        if (action === "schools") showSchools();
+        if (action === "admission") showAdmission();
+        if (action === "locations") showLocations();
+        if (action === "contact") showContact();
+    });
+
+    // Add action attributes to generated internal buttons
+    const originalAddLinks = addLinks;
+
+    // Open chatbot
+    openButton.addEventListener("click", () => {
+        panel.classList.add("ot-open");
+        openButton.setAttribute("aria-expanded", "true");
+        input.focus();
+    });
+
+    closeButton.addEventListener("click", () => {
+        panel.classList.remove("ot-open");
+        openButton.setAttribute("aria-expanded", "false");
+    });
+
+    // Submit typed questions
+    form.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const question = input.value.trim();
+        if (!question) return;
+
+        input.value = "";
+        handleQuestion(question);
+    });
+
+    // Preset questions
+    document.querySelectorAll(
+        "#otChatPanel [data-question]"
+    ).forEach(button => {
+        button.addEventListener("click", () => {
+            handleQuestion(button.dataset.question);
+        });
+    });
+
+    // Automatic welcome popup once per browser session
+    window.addEventListener("load", () => {
+        if (sessionStorage.getItem("otChatWelcomed")) return;
+
+        welcomeTimer = window.setTimeout(() => {
+            panel.classList.add("ot-open");
+            openButton.setAttribute("aria-expanded", "true");
+            sessionStorage.setItem("otChatWelcomed", "yes");
+        }, 4000);
+    });
+
+    // Cancel pending popup if user has already opened or closed it
+    openButton.addEventListener("click", () => {
+        if (welcomeTimer) clearTimeout(welcomeTimer);
+    });
+
+    closeButton.addEventListener("click", () => {
+        if (welcomeTimer) clearTimeout(welcomeTimer);
+    });
+
+})();
+</script>
 </body>
 </html>

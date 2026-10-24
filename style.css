@@ -1079,3 +1079,761 @@ a:focus-visible {
         transition: none;
     }
 }
+
+/* ==========================================
+   OLIVE TREE GROUP OF SCHOOLS
+   BRIGHT PROFESSIONAL CHATBOT
+========================================== */
+
+.ot-assistant,
+.ot-assistant * {
+    box-sizing: border-box;
+}
+
+.ot-assistant {
+    --ot-green: #17643d;
+    --ot-green-dark: #10472c;
+    --ot-green-light: #32a65c;
+    --ot-gold: #ffd34f;
+    --ot-brown: #89502a;
+    --ot-white: #ffffff;
+    --ot-cream: #fffdf5;
+    --ot-text: #252c26;
+
+    position: fixed;
+    right: 24px;
+    bottom: 22px;
+    z-index: 99999;
+    color: var(--ot-text);
+}
+
+/* ==========================================
+   FLOATING ROBOT BUTTON
+========================================== */
+
+.ot-chat-launcher {
+    width: 78px;
+    height: 78px;
+    padding: 5px;
+    border: 3px solid var(--ot-gold);
+    border-radius: 50%;
+
+    background: linear-gradient(
+        145deg,
+        #45bd6d 0%,
+        #27894f 45%,
+        #17643d 100%
+    );
+
+    color: #ffffff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+
+    box-shadow:
+        0 5px 18px rgba(23, 100, 61, 0.28),
+        0 0 0 4px rgba(255, 211, 79, 0.17);
+
+    animation: otRobotFloat 3s ease-in-out infinite;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.ot-chat-launcher:hover {
+    transform: translateY(-4px) scale(1.04);
+
+    box-shadow:
+        0 8px 24px rgba(23, 100, 61, 0.35),
+        0 0 0 5px rgba(255, 211, 79, 0.25);
+}
+
+.ot-launcher-robot {
+    font-size: 34px;
+    line-height: 1.05;
+}
+
+.ot-launcher-label {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #ffffff;
+}
+
+.ot-online-indicator {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    width: 14px;
+    height: 14px;
+
+    background: #42e779;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+}
+
+/* ==========================================
+   CHAT PANEL
+========================================== */
+
+.ot-chat-panel {
+    display: none;
+    flex-direction: column;
+
+    width: 390px;
+    max-width: calc(100vw - 28px);
+
+    height: min(640px, calc(100dvh - 110px));
+    min-height: 380px;
+
+    background: #ffffff;
+
+    border: 2px solid #f0d77e;
+    border-radius: 21px;
+
+    overflow: hidden;
+    margin-bottom: 14px;
+
+    box-shadow:
+        0 12px 40px rgba(25, 51, 35, 0.20),
+        0 2px 8px rgba(255, 211, 79, 0.16);
+}
+
+.ot-chat-panel.ot-open {
+    display: flex;
+}
+
+/* ==========================================
+   CHAT HEADER
+========================================== */
+
+.ot-chat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 16px;
+
+    background: linear-gradient(
+        120deg,
+        #10472c 0%,
+        #17643d 48%,
+        #32a65c 100%
+    );
+
+    border-bottom: 4px solid #ffd34f;
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.ot-avatar {
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border: 3px solid #ffd34f;
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.12);
+}
+
+.ot-header-info {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ot-header-info strong {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.ot-header-info span {
+    font-size: 17px;
+    line-height: 1.4;
+    color: #fff4cb;
+}
+
+.ot-header-info i {
+    display: inline-block;
+
+    width: 9px;
+    height: 9px;
+
+    background: #59f18a;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+
+    margin-right: 5px;
+}
+
+.ot-chat-header > button {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+
+    font-size: 29px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.ot-chat-header > button:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+/* ==========================================
+   CHAT CONTENT
+========================================== */
+
+.ot-chat-content {
+    flex: 1;
+    min-height: 0;
+
+    padding: 16px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: #fffdf7;
+    scroll-behavior: smooth;
+}
+
+.ot-chat-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ot-chat-content::-webkit-scrollbar-track {
+    background: #fff8e6;
+}
+
+.ot-chat-content::-webkit-scrollbar-thumb {
+    background: #b7d7a8;
+    border-radius: 10px;
+}
+
+.ot-chat-content::-webkit-scrollbar-thumb:hover {
+    background: #27894f;
+}
+
+/* ==========================================
+   BOT AND USER MESSAGES
+========================================== */
+
+.ot-bot-message,
+.ot-user-message {
+    padding: 13px 14px;
+
+    border-radius: 14px;
+    margin-bottom: 13px;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.ot-bot-message {
+    color: #24452d;
+
+    background: linear-gradient(
+        135deg,
+        #eff9e9,
+        #e6f5e5
+    );
+
+    border: 1px solid #cde8bc;
+    border-bottom-left-radius: 4px;
+
+    margin-right: 12px;
+}
+
+.ot-user-message {
+    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #17643d,
+        #27894f
+    );
+
+    border: 1px solid #17643d;
+    border-bottom-right-radius: 4px;
+
+    margin-left: 30px;
+}
+
+.ot-message-label {
+    color: #89502a;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+/* ==========================================
+   SECTION LABELS
+========================================== */
+
+.ot-section-label {
+    color: #89502a;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+
+    margin: 17px 0 10px;
+}
+
+/* ==========================================
+   SERVICE BUTTON GRID
+========================================== */
+
+.ot-quick-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+}
+
+.ot-quick-grid button {
+    min-width: 0;
+    min-height: 78px;
+
+    padding: 11px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 5px;
+
+    border: 1px solid #d9e8ce;
+    border-radius: 13px;
+
+    color: #164b32;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Individual bright colours */
+
+.ot-quick-grid button:nth-child(1) {
+    background: #e3f4d9;
+    border-color: #b7d99e;
+}
+
+.ot-quick-grid button:nth-child(2) {
+    background: #fff2c6;
+    border-color: #eed27b;
+}
+
+.ot-quick-grid button:nth-child(3) {
+    background: #e2f4fc;
+    border-color: #a9d8ed;
+}
+
+.ot-quick-grid button:nth-child(4) {
+    background: #ffeadf;
+    border-color: #edc0a7;
+}
+
+.ot-quick-grid button span {
+    font-size: 23px;
+    line-height: 1.2;
+}
+
+.ot-quick-grid button:hover {
+    transform: translateY(-2px);
+
+    border-color: #27894f;
+
+    box-shadow: 0 4px 10px rgba(23, 100, 61, 0.10);
+}
+
+/* ==========================================
+   POPULAR QUESTIONS
+========================================== */
+
+.ot-suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    padding-bottom: 5px;
+}
+
+.ot-suggestions button {
+    padding: 11px 13px;
+
+    background: #ffffff;
+    color: #17643d;
+
+    border: 1px solid #e5d39c;
+    border-radius: 11px;
+
+    font-size: 17px;
+    line-height: 1.45;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.ot-suggestions button:hover {
+    background: #fff5d7;
+    border-color: #e4bb36;
+    transform: translateX(2px);
+}
+
+/* ==========================================
+   LINKS INSIDE CHATBOT ANSWERS
+========================================== */
+
+.ot-answer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    margin: 8px 0 16px;
+}
+
+.ot-answer-link {
+    display: block;
+
+    padding: 12px 13px;
+
+    background: #ffffff;
+    color: #17643d;
+
+    border: 1px solid #e4c766;
+    border-radius: 11px;
+
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 600;
+
+    text-decoration: none;
+    overflow-wrap: anywhere;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.ot-answer-link:hover {
+    background: #17643d;
+    color: #ffffff;
+    border-color: #17643d;
+}
+
+/* ==========================================
+   CHAT INPUT
+========================================== */
+
+.ot-chat-input-area {
+    flex-shrink: 0;
+
+    padding: 12px;
+
+    background: #ffffff;
+    border-top: 1px solid #eee2bd;
+}
+
+.ot-chat-input-area form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ot-chat-input-area input {
+    width: 0;
+    min-width: 0;
+    flex: 1;
+
+    height: 47px;
+    padding: 10px 15px;
+
+    background: #fffefa;
+    color: #252c26;
+
+    border: 1px solid #d8dfd2;
+    border-radius: 25px;
+
+    outline: none;
+
+    font-size: 17px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.ot-chat-input-area input::placeholder {
+    color: #777f75;
+    opacity: 1;
+}
+
+.ot-chat-input-area input:focus {
+    border-color: #27894f;
+
+    box-shadow: 0 0 0 3px rgba(39, 137, 79, 0.10);
+}
+
+.ot-chat-input-area form button {
+    width: 47px;
+    height: 47px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        145deg,
+        #32a65c,
+        #17643d
+    );
+
+    color: #ffffff;
+
+    border: 0;
+    border-radius: 50%;
+
+    font-size: 23px;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.ot-chat-input-area form button:hover {
+    background: #10472c;
+    transform: scale(1.06);
+}
+
+/* ==========================================
+   CHATBOT FOOTER
+========================================== */
+
+.ot-chat-footer {
+    padding: 11px;
+
+    background: linear-gradient(
+        90deg,
+        #fff1bc,
+        #fff8e2,
+        #fff1bc
+    );
+
+    color: #70451e;
+
+    border-top: 1px solid #f0dc9b;
+
+    text-align: center;
+
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.ot-footer-leaf {
+    color: #17643d;
+    margin-right: 5px;
+}
+
+/* ==========================================
+   FLOATING ANIMATION
+========================================== */
+
+@keyframes otRobotFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 768px) {
+    .ot-assistant {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    .ot-chat-panel {
+        width: 360px;
+        max-width: calc(100vw - 24px);
+        height: min(620px, calc(100dvh - 100px));
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+    .ot-assistant {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .ot-chat-panel {
+        width: calc(100vw - 24px);
+        max-width: 390px;
+
+        height: min(610px, calc(100dvh - 95px));
+        min-height: 340px;
+
+        margin-bottom: 10px;
+
+        border-radius: 18px;
+    }
+
+    .ot-chat-launcher {
+        width: 66px;
+        height: 66px;
+    }
+
+    .ot-launcher-robot {
+        font-size: 29px;
+    }
+
+    .ot-chat-header {
+        padding: 13px;
+        gap: 10px;
+    }
+
+    .ot-avatar {
+        width: 47px;
+        height: 47px;
+        font-size: 29px;
+    }
+
+    .ot-chat-content {
+        padding: 13px;
+    }
+
+    .ot-quick-grid {
+        gap: 8px;
+    }
+
+    .ot-quick-grid button {
+        min-height: 73px;
+        padding: 10px;
+    }
+
+    .ot-bot-message,
+    .ot-user-message {
+        padding: 11px 12px;
+    }
+
+    .ot-chat-input-area {
+        padding: 10px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 360px) {
+    .ot-assistant {
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .ot-chat-panel {
+        width: calc(100vw - 16px);
+        max-width: 340px;
+    }
+
+    .ot-chat-launcher {
+        width: 60px;
+        height: 60px;
+    }
+
+    .ot-launcher-robot {
+        font-size: 26px;
+    }
+
+    .ot-quick-grid button {
+        font-size: 17px;
+        padding: 8px;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.ot-assistant button:focus-visible,
+.ot-assistant a:focus-visible,
+.ot-assistant input:focus-visible {
+    outline: 3px solid #e4b82e;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ot-chat-launcher {
+        animation: none;
+    }
+
+    .ot-assistant *,
+    .ot-assistant *::before,
+    .ot-assistant *::after {
+        scroll-behavior: auto;
+        transition-duration: 0.01ms;
+    }
+}
