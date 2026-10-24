@@ -119,7 +119,7 @@ a:focus-visible {
     align-items: center;
     gap: 9px;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 1.6;
     overflow-wrap: anywhere;
@@ -143,7 +143,7 @@ a:focus-visible {
 
 .ot-topbar-message {
     color: #f4dfab;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.3px;
 }
@@ -447,364 +447,319 @@ a:focus-visible {
     transform: translateX(4px);
 }
 
-/* ================= FOOTER ================= */
 
-.ot-footer {
-    position: relative;
-    width: 100%;
-    min-width: 0;
-    overflow: hidden;
-    background: rgb(66, 17, 2);
-    color: #ffffff;
-}
+/* ==========================================
+   OLIVE TREE GROUP OF SCHOOLS
+   PREMIUM BROWN FOOTER
+========================================== */
 
-.ot-footer *,
-.ot-footer *::before,
-.ot-footer *::after {
+.ot-footer,
+.ot-footer * {
     box-sizing: border-box;
 }
 
-.ot-footer a {
-    text-decoration: none;
-    transition: color 0.3s ease, background 0.3s ease;
-}
-
-.ot-footer p {
-    margin: 0;
-    color: #ffffff;
-    font-size: 17px;
-    line-height: 1.75;
-    text-align: justify;
-    overflow-wrap: anywhere;
-}
-
-/* GOLD TOP PATTERN */
-
-.ot-footer-top-pattern {
+.ot-footer {
     width: 100%;
-    height: 7px;
-    background: linear-gradient(
-        90deg,
-        #784522,
-        #d6aa70,
-        #f0d5a7,
-        #d6aa70,
-        #784522
-    );
-}
-
-/* FOOTER GRID */
-
-.ot-footer-inner {
-    width: min(1240px, calc(100% - 48px));
-    margin-inline: auto;
-    padding: 50px 0;
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.2fr) minmax(0, 1fr);
-    gap: 38px;
-    align-items: start;
-}
-
-.ot-footer-brand,
-.ot-footer-links,
-.ot-footer-contact {
-    min-width: 0;
-}
-
-/* FOOTER BRAND */
-
-.ot-footer-logo {
-    display: inline-block;
-    max-width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 19px;
-    border-radius: 5px;
-    background: #ffffff;
-}
-
-.ot-footer-logo img {
-    display: block;
-    width: 205px;
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.ot-footer-brand h3 {
-    margin: 0 0 15px;
-    color: #f0d5a7;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 1.4;
-}
-
-.ot-footer-brand > p {
-    margin-bottom: 22px;
-    color: #ffffff;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-/* FOOTER SOCIAL ICONS */
-
-.ot-footer-social {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.ot-footer-social a {
-    width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 5px;
-    background: #286b43;
-    color: #ffffff;
-    font-size: 17px;
-}
-
-.ot-footer-social a:hover {
-    background: #a66a3c;
-    color: #ffffff;
-}
-
-/* FOOTER SECTION HEADINGS */
-
-.ot-footer-links > h3,
-.ot-footer-contact > h3 {
-    position: relative;
-    margin: 0 0 24px;
-    padding-bottom: 13px;
-    color: #f0d5a7;
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 1.4;
-}
-
-.ot-footer-links > h3::after,
-.ot-footer-contact > h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 52px;
-    height: 3px;
-    background: #d6aa70;
-}
-
-/* SCHOOL LINKS */
-
-.ot-footer-school {
-    min-width: 0;
-    margin-bottom: 16px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.16);
-}
-
-.ot-footer-school > a {
-    display: flex;
-    align-items: flex-start;
-    gap: 9px;
-    margin-bottom: 7px;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
-}
-
-.ot-footer-school > a i {
-    flex-shrink: 0;
-    margin-top: 6px;
-    color: #d6aa70;
-    font-size: 14px;
-}
-
-.ot-footer-school > a:hover {
-    color: #f0d5a7;
-}
-
-/* SCHOOL ADDRESSES */
-
-.ot-footer-school-address {
-    display: flex;
-    align-items: flex-start;
-    gap: 9px;
-    padding-left: 19px;
-    color: #f4eee5;
-    font-size: 15px !important;
-    line-height: 1.7 !important;
-    text-align: left !important;
-}
-
-.ot-footer-school-address i {
-    flex-shrink: 0;
-    margin-top: 6px;
-    color: #d6aa70;
-    font-size: 13px;
-}
-
-.ot-footer-school-address span {
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-/* ADMISSION LINK */
-
-.ot-footer-institution-admission {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    color: #f0d5a7;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.5;
-}
-
-.ot-footer-institution-admission:hover {
-    color: #ffffff;
-}
-
-/* CONTACT DETAILS */
-
-.ot-footer-contact > p,
-.ot-footer-contact > a:not(.ot-footer-admission) {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 17px;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1.7;
-    text-align: left;
-    overflow-wrap: anywhere;
-}
-
-.ot-footer-contact > a:not(.ot-footer-admission):hover {
-    color: #f0d5a7;
-}
-
-.ot-footer-contact > p span:last-child,
-.ot-footer-contact > a span:last-child {
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-/* CONTACT ICON BOX */
-
-.ot-contact-icon {
-    width: 37px;
-    height: 37px;
-    min-width: 37px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 5px;
-    background: rgba(255,255,255,0.1);
-    color: #f0d5a7;
-    font-size: 15px;
-}
-
-/* ADMISSION BUTTON */
-
-.ot-footer-admission {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 100%;
-    padding: 13px 19px;
-    margin-top: 7px;
-    border-radius: 5px;
-    background: #f0d5a7;
-    color: #194d32;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 1.5;
-}
-
-.ot-footer-admission:hover {
-    background: #ffffff;
-    color: #784522;
-}
-
-/* ================= GOOGLE MAP ================= */
-
-.ot-footer-map {
-    width: 100%;
-    height: 220px;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #e8eee7;
-    line-height: 0;
+    background:#874622 ;
+    color: #fff8ed;
 }
 
-.ot-footer-map iframe {
-    display: block;
+/* TOP GOLD ACCENT */
+
+.ot-footer-pattern {
     width: 100%;
-    height: 100%;
-    border: 0;
+    height: 4px;
+    background: #e8c98b;
+}
+
+/* MAIN CONTAINER */
+
+.ot-footer-container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 25px 0 24px;
+}
+
+/* SECTION TITLE */
+
+.ot-footer-title {
+    text-align: center;
+    margin: 0 0 22px;
+}
+
+.ot-footer-title span {
+    display: block;
+    color: #f5dfb4;
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    margin: 0 0 4px;
+}
+
+.ot-footer-title h2 {
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 1.4;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ot-footer-title-line {
+    width: 58px;
+    height: 3px;
+    background: #f0d49b;
+    margin: 9px auto 0;
+    border-radius: 2px;
+}
+
+/* THREE-COLUMN INSTITUTION ROW */
+
+.ot-institutions-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0;
+}
+
+/* INSTITUTION COLUMN */
+
+.ot-institution {
+    min-width: 0;
+    padding: 2px 25px;
+    border-right: 1px solid rgba(255, 244, 225, 0.3);
+}
+
+.ot-institution:first-child {
+    padding-left: 8px;
+}
+
+.ot-institution:last-child {
+    padding-right: 8px;
+    border-right: none;
+}
+
+/* INSTITUTION NAME */
+
+.ot-institution h3 {
+    color: #ffd57e;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 235, 200, 0.3);
+}
+
+/* DETAILS ALIGNMENT */
+
+.ot-institution-detail {
+    display: grid;
+    grid-template-columns: 19px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 10px;
+    margin: 0 0 12px;
+    min-width: 0;
+}
+
+.ot-institution-detail > i {
+    color: #ffd57e;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.ot-institution-detail p,
+.ot-institution-detail a {
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 400;
     margin: 0;
     padding: 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-decoration: none;
 }
 
-/* ================= COPYRIGHT ================= */
-
-.ot-footer-bottom {
-    width: 100%;
-    padding: 17px max(24px, calc((100% - 1240px) / 2));
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-    background: #103923;
-    border-top: 1px solid rgba(255,255,255,0.15);
-}
-
-.ot-footer-bottom p {
-    color: #ffffff;
-    font-size: 14px;
-    line-height: 1.6;
+.ot-institution-detail p {
     text-align: left;
 }
 
-.ot-footer-motto {
+.ot-institution-detail a {
+    display: inline-block;
+}
+
+.ot-institution-detail a:hover {
+    color: #ffe2a5;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* BOTTOM COPYRIGHT BAR */
+
+.ot-footer-bottom {
+    width: 100%;
+    min-height: 58px;
+    padding: 10px 4%;
+    background: #63351f;
+    border-top: 1px solid rgba(255, 236, 207, 0.25);
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: #f0d5a7 !important;
+    justify-content: space-between;
+    gap: 16px;
 }
 
-.ot-footer-motto i {
-    color: #d6aa70;
+/* COPYRIGHT LEFT */
+
+.ot-footer-copyright {
+    min-width: 0;
 }
 
-/* BACK TO TOP */
+.ot-footer-copyright p {
+    color: #fff7e9;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
 
-.ot-back-top {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
+/* DESIGN CREDIT RIGHT */
+
+.ot-footer-credit {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #fff7e9;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.ot-footer-credit > span:first-child {
+    color: #f5d69b;
+}
+
+.ot-eduweb-logo {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
-    background: #a66a3c;
-    color: #ffffff;
+    flex-shrink: 0;
 }
 
-.ot-back-top:hover {
+.ot-eduweb-logo img {
+    display: block;
+    width:60px;
+    height:40px;
+    object-fit: contain;
+    padding: 2px;
     background: #ffffff;
-    color: #194d32;
+    border-radius: 3px;
+}
+
+.ot-eduweb-name {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+    .ot-footer-container {
+        width: 100%;
+    }
+
+    .ot-institution {
+        padding: 2px 15px;
+    }
+
+    .ot-institution h3 {
+        font-size: 19px;
+    }
+
+    .ot-footer-bottom {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .ot-footer-container {
+        width: 100%;
+        padding: 22px 0;
+    }
+
+    .ot-footer-title {
+        margin-bottom: 17px;
+    }
+
+    .ot-footer-title h2 {
+        font-size: 23px;
+    }
+
+    .ot-institutions-row {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ot-institution,
+    .ot-institution:first-child,
+    .ot-institution:last-child {
+        padding: 16px 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 244, 225, 0.3);
+    }
+
+    .ot-institution:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .ot-institution h3 {
+        margin-bottom: 12px;
+        padding-bottom: 8px;
+    }
+
+    .ot-institution-detail {
+        margin-bottom: 9px;
+    }
+
+    .ot-footer-bottom {
+        min-height: 0;
+        padding: 13px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ot-footer-credit {
+        justify-content: flex-start;
+    }
+}
+
+/* EXTRA SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .ot-footer-title h2 {
+        font-size: 22px;
+    }
+
+    .ot-institution {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .ot-footer-credit {
+        gap: 7px;
+    }
+
+    .ot-eduweb-logo img {
+        width:50px;
+        height:30px;
+    }
 }
 
 /* =========================================================
@@ -836,15 +791,6 @@ a:focus-visible {
         font-size: 18px;
     }
 
-    .ot-footer-inner {
-        gap: 26px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .ot-footer-brand {
-        grid-column: 1 / -1;
-        max-width: 720px;
-    }
 }
 
 /* =========================================================
@@ -890,19 +836,6 @@ a:focus-visible {
         height: 145px;
     }
 
-    .ot-footer-inner {
-        width: calc(100% - 40px);
-        gap: 28px;
-        padding: 42px 0;
-    }
-
-    .ot-footer-bottom {
-        padding: 17px 20px;
-    }
-
-    .ot-footer-map {
-        height: 195px;
-    }
 }
 
 /* =========================================================
@@ -933,7 +866,7 @@ a:focus-visible {
     }
 
     .ot-topbar-info a {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .ot-topbar-right {
@@ -942,7 +875,7 @@ a:focus-visible {
     }
 
     .ot-topbar-message {
-        font-size: 13px;
+        font-size: 16px;
         text-align: center;
     }
 
@@ -1032,114 +965,6 @@ a:focus-visible {
         padding: 8px 16px;
         font-size: 14px;
     }
-
-    /* FOOTER */
-
-    .ot-footer p {
-        font-size: 15px;
-        line-height: 1.75;
-    }
-
-    .ot-footer-inner {
-        width: calc(100% - 32px);
-        grid-template-columns: minmax(0, 1fr);
-        gap: 30px;
-        padding: 35px 0;
-    }
-
-    .ot-footer-brand {
-        grid-column: auto;
-        max-width: none;
-    }
-
-    .ot-footer-logo {
-        margin-bottom: 16px;
-    }
-
-    .ot-footer-logo img {
-        width: 180px;
-    }
-
-    .ot-footer-brand h3 {
-        font-size: 20px;
-    }
-
-    .ot-footer-brand > p {
-        font-size: 15px;
-        margin-bottom: 18px;
-    }
-
-    .ot-footer-social {
-        gap: 8px;
-    }
-
-    .ot-footer-social a {
-        width: 39px;
-        height: 39px;
-        font-size: 15px;
-    }
-
-    .ot-footer-links > h3,
-    .ot-footer-contact > h3 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .ot-footer-school {
-        margin-bottom: 14px;
-        padding-bottom: 13px;
-    }
-
-    .ot-footer-school > a {
-        font-size: 15px;
-    }
-
-    .ot-footer-school-address {
-        padding-left: 17px;
-        font-size: 14px !important;
-    }
-
-    .ot-footer-institution-admission {
-        font-size: 15px;
-    }
-
-    .ot-footer-contact > p,
-    .ot-footer-contact > a:not(.ot-footer-admission) {
-        font-size: 15px;
-        margin-bottom: 14px;
-    }
-
-    .ot-contact-icon {
-        width: 34px;
-        height: 34px;
-        min-width: 34px;
-    }
-
-    .ot-footer-admission {
-        padding: 12px 16px;
-        font-size: 15px;
-    }
-
-    .ot-footer-map {
-        height: 175px;
-    }
-
-    .ot-footer-bottom {
-        flex-direction: column;
-        justify-content: center;
-        gap: 11px;
-        padding: 18px 14px;
-    }
-
-    .ot-footer-bottom p {
-        font-size: 13px;
-        text-align: center;
-    }
-
-    .ot-footer-motto {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
 }
 
 /* =========================================================
@@ -1159,7 +984,7 @@ a:focus-visible {
     }
 
     .ot-topbar-info a {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .ot-institutions {
@@ -1193,36 +1018,6 @@ a:focus-visible {
         padding: 8px 13px;
     }
 
-    .ot-footer-inner {
-        width: calc(100% - 26px);
-        gap: 26px;
-        padding: 30px 0;
-    }
-
-    .ot-footer-logo img {
-        width: 165px;
-    }
-
-    .ot-footer-brand h3 {
-        font-size: 19px;
-    }
-
-    .ot-footer-links > h3,
-    .ot-footer-contact > h3 {
-        font-size: 19px;
-    }
-
-    .ot-footer-school > a {
-        font-size: 14px;
-    }
-
-    .ot-footer-school-address {
-        font-size: 13px !important;
-    }
-
-    .ot-footer-map {
-        height: 155px;
-    }
 }
 
 /* =========================================================
@@ -1266,27 +1061,6 @@ a:focus-visible {
         padding: 7px 11px;
     }
 
-    .ot-footer-inner {
-        width: calc(100% - 22px);
-    }
-
-    .ot-footer-logo img {
-        width: 150px;
-    }
-
-    .ot-footer-school-address {
-        padding-left: 13px;
-        font-size: 12px !important;
-    }
-
-    .ot-footer-admission {
-        padding: 11px 13px;
-        font-size: 14px;
-    }
-
-    .ot-footer-map {
-        height: 140px;
-    }
 }
 
 /* ================= ACCESSIBILITY ================= */
