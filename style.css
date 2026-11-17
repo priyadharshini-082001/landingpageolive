@@ -691,7 +691,7 @@ a:focus-visible {
 @media (max-width: 700px) {
     .ot-footer-container {
         width: 100%;
-        padding: 22px 0;
+        padding: 22px;
     }
 
     .ot-footer-title {
@@ -1078,4 +1078,1156 @@ a:focus-visible {
     .ot-footer a {
         transition: none;
     }
+}
+
+/* =====================================================
+   OLIVE TREE – SMOOTH SCHOOL IMAGE CAROUSEL
+===================================================== */
+
+.ot-school-carousel {
+    width: 100%;
+    padding: 25px 20px;
+    overflow: hidden;
+}
+
+/* HEADING */
+
+.ot-carousel-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.ot-carousel-heading span {
+    display: block;
+    color: #a77b3c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.ot-carousel-heading h2 {
+    color: #245331;
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0 0 9px;
+}
+
+.ot-carousel-heading h2 strong {
+    color: #a77b3c;
+    font-weight: 800;
+}
+
+.ot-carousel-heading p {
+    color: #6e756d;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =====================================================
+   CAROUSEL CONTAINER
+===================================================== */
+
+.ot-carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 1250px;
+    height: 550px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.ot-carousel-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =====================================================
+   SCHOOL SLIDES
+===================================================== */
+
+.ot-school-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 340px;
+    height: 430px;
+
+    border-radius: 16px;
+    overflow: visible;
+
+    transform: translate(-50%, -50%) scale(.84);
+
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+
+    transition:
+        transform .75s cubic-bezier(.22,.61,.36,1),
+        opacity .65s ease,
+        visibility .65s ease,
+        width .65s ease,
+        height .65s ease;
+}
+
+
+/* CENTRE CARD */
+
+.ot-school-slide.active {
+    width: 440px;
+    height: 500px;
+
+    transform: translate(-50%, -50%) scale(1);
+
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+}
+
+
+/* LEFT CARD */
+
+.ot-school-slide.prev {
+    transform: translate(calc(-50% - 365px), -50%) scale(.88);
+
+    opacity: .88;
+    visibility: visible;
+    z-index: 3;
+}
+
+
+/* RIGHT CARD */
+
+.ot-school-slide.next {
+    transform: translate(calc(-50% + 365px), -50%) scale(.88);
+
+    opacity: .88;
+    visibility: visible;
+    z-index: 3;
+}
+
+
+/* =====================================================
+   SCHOOL IMAGE
+===================================================== */
+
+.ot-school-photo {
+    width: 100%;
+    height: 66%;
+
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+
+    background: #e8eee5;
+}
+
+.ot-school-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .7s ease;
+}
+
+.ot-school-slide:hover .ot-school-photo img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   SCHOOL DETAILS
+===================================================== */
+
+.ot-school-content {
+    position: relative;
+
+    width: 100%;
+    height: 34%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 40px 18px 20px;
+
+    background: #ffffff;
+    border-radius: 0 0 16px 16px;
+    text-align: center;
+}
+
+
+/* =====================================================
+   ROUND LOGO
+===================================================== */
+
+.ot-round-logo {
+    position: absolute;
+
+    top: -39px;
+    left: 50%;
+
+    width: 78px;
+    height: 78px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+
+    overflow: hidden;
+    z-index: 5;
+}
+
+.ot-round-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    padding: 5px;
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   SCHOOL NAME
+===================================================== */
+
+.ot-school-content h3 {
+    width: 100%;
+
+    color: #245331;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.3;
+
+    margin: 0 0 13px;
+}
+
+
+/* =====================================================
+   EXPLORE BUTTON
+===================================================== */
+
+.ot-explore-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 9px 21px;
+
+    color: #ffffff;
+    background: #245331;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition: all .3s ease;
+}
+
+.ot-explore-btn:hover {
+    color: #ffffff;
+    background: #a77b3c;
+    transform: translateY(-2px);
+}
+
+.ot-explore-btn i {
+    font-size: 11px;
+    transition: transform .3s ease;
+}
+
+.ot-explore-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.ot-carousel-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 15px;
+}
+
+.ot-carousel-arrow {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    color: #ffffff;
+    background: #245331;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+
+.ot-carousel-arrow:hover {
+    background: #a77b3c;
+    transform: scale(1.08);
+}
+
+
+/* DOTS */
+
+.ot-carousel-indicators {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.ot-indicator {
+    width: 9px;
+    height: 9px;
+
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+
+    background: #c6cfc4;
+    cursor: pointer;
+
+    transition: all .35s ease;
+}
+
+.ot-indicator.active {
+    width: 25px;
+    background: #a77b3c;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .ot-carousel-container {
+        height: 480px;
+    }
+
+    .ot-school-slide.active {
+        width: 370px;
+        height: 440px;
+    }
+
+    .ot-school-slide.prev,
+    .ot-school-slide.next {
+        width: 290px;
+        height: 390px;
+    }
+
+    .ot-school-slide.prev {
+        transform: translate(calc(-50% - 285px), -50%) scale(.9);
+    }
+
+    .ot-school-slide.next {
+        transform: translate(calc(-50% + 285px), -50%) scale(.9);
+    }
+
+    .ot-school-content h3 {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE – THREE EQUAL SIZE CARDS
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .ot-school-carousel {
+        padding: 40px 0 40px;
+    }
+
+    .ot-carousel-heading {
+        padding: 0 15px;
+        margin-bottom: 25px;
+    }
+
+    .ot-carousel-heading h2 {
+        font-size: 25px;
+    }
+
+    .ot-carousel-heading p {
+        font-size: 12px;
+    }
+
+    .ot-carousel-container {
+        height: 370px;
+    }
+
+    /* All three cards same size */
+
+    .ot-school-slide,
+    .ot-school-slide.active,
+    .ot-school-slide.prev,
+    .ot-school-slide.next {
+        width: 255px;
+        height: 335px;
+
+        border-radius: 13px;
+
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    .ot-school-slide.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
+    }
+
+    .ot-school-slide.prev {
+        transform: translate(calc(-50% - 190px), -50%);
+        opacity: .8;
+        visibility: visible;
+        z-index: 3;
+    }
+
+    .ot-school-slide.next {
+        transform: translate(calc(-50% + 190px), -50%);
+        opacity: .8;
+        visibility: visible;
+        z-index: 3;
+    }
+
+
+    /* IMAGE */
+
+    .ot-school-photo {
+        height: 65%;
+        border-radius: 13px 13px 0 0;
+    }
+
+
+    /* DETAILS */
+
+    .ot-school-content {
+        height: 35%;
+        padding: 34px 10px 13px;
+        border-radius: 0 0 13px 13px;
+    }
+
+
+    /* SMALL ROUND LOGO */
+
+    .ot-round-logo {
+        width: 62px;
+        height: 62px;
+        top: -31px;
+        border-width: 2px;
+    }
+
+    .ot-round-logo img {
+        padding: 4px;
+    }
+
+
+    /* SCHOOL NAME */
+
+    .ot-school-content h3 {
+        font-size: 13px;
+        line-height: 1.3;
+        margin-bottom: 9px;
+    }
+
+
+    /* EXPLORE */
+
+    .ot-explore-btn {
+        padding: 7px 15px;
+        font-size: 10px;
+        gap: 6px;
+    }
+
+    .ot-explore-btn i {
+        font-size: 9px;
+    }
+
+
+    /* CONTROLS */
+
+    .ot-carousel-navigation {
+        margin-top: 12px;
+        gap: 17px;
+    }
+
+    .ot-carousel-arrow {
+        width: 34px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .ot-carousel-container {
+        height: 345px;
+    }
+
+    .ot-school-slide,
+    .ot-school-slide.active,
+    .ot-school-slide.prev,
+    .ot-school-slide.next {
+        width: 230px;
+        height: 315px;
+    }
+
+    .ot-school-slide.prev {
+        transform: translate(calc(-50% - 172px), -50%);
+    }
+
+    .ot-school-slide.next {
+        transform: translate(calc(-50% + 172px), -50%);
+    }
+
+    .ot-round-logo {
+        width: 57px;
+        height: 57px;
+        top: -28px;
+    }
+
+    .ot-school-content h3 {
+        font-size: 12px;
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ot-school-slide,
+    .ot-school-photo img,
+    .ot-explore-btn,
+    .ot-carousel-arrow,
+    .ot-indicator {
+        transition: none;
+    }
+
+}
+
+/* =====================================================
+   OLIVE TREE – HERO BANNER
+===================================================== */
+
+.ot-hero-banner {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding:25px 0;
+    background: #ffffff;
+}
+
+.ot-hero-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.ot-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.ot-hero-label {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: #76552e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 23px;
+}
+
+.ot-hero-label span {
+    width: 35px;
+    height: 2px;
+    background: #b18a4e;
+}
+
+.ot-hero-content h1 {
+    color: #21432d;
+    font-size: clamp(40px, 4.3vw, 61px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin: 0 0 23px;
+}
+
+.ot-hero-content h1 span {
+    display: block;
+    color: #98713d;
+}
+
+.ot-hero-content p {
+    max-width: 550px;
+    color: #000000;
+    font-size: 17px;
+    line-height: 1.9;
+    text-align: justify;
+    font-weight: 400;
+    margin: 0 0 30px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.ot-hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.ot-btn-primary,
+.ot-btn-secondary {
+    min-height: 51px;
+    padding: 0 23px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+
+    transition: all .3s ease;
+}
+
+.ot-btn-primary {
+    background: #245331;
+    color: #fff;
+    border: 1px solid #245331;
+}
+
+.ot-btn-primary span {
+    font-size: 21px;
+    transition: transform .3s ease;
+}
+
+.ot-btn-primary:hover {
+    background: #98713d;
+    border-color: #98713d;
+    color: #fff;
+}
+
+.ot-btn-primary:hover span {
+    transform: translateX(5px);
+}
+
+.ot-btn-secondary {
+    color: #21432d;
+    border: 1px solid #98713d;
+    background: transparent;
+}
+
+.ot-btn-secondary:hover {
+    background: #21432d;
+    color: #fff;
+    border-color: #21432d;
+}
+
+
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
+
+.ot-hero-highlight {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 37px;
+    color: #333a30;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.ot-highlight-line {
+    width: 38px;
+    height: 2px;
+    background: #b18a4e;
+}
+
+
+/* =====================================================
+   RIGHT IMAGE VISUAL
+===================================================== */
+
+.ot-hero-visual {
+    width: 100%;
+    max-width: 590px;
+    margin-left: auto;
+    position: relative;
+    padding: 0 12px;
+}
+
+
+/* TOP LABEL */
+
+.ot-visual-top {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    margin-bottom: 15px;
+    padding-right: 5px;
+
+    color: #52634b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.ot-visual-dot {
+    width: 6px;
+    height: 6px;
+    background: #b18a4e;
+    border-radius: 50%;
+}
+
+
+/* IMAGE FRAME */
+
+.ot-image-frame {
+    width: 100%;
+    height: 450px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffd2;
+    border-radius: 5px;
+    overflow: visible;
+    isolation: isolate;
+}
+
+/* DECORATIVE BACKGROUND */
+
+.ot-image-background {
+    position: absolute;
+    inset: 12px -12px -12px 12px;
+    border: 1px solid #b18a4e;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/* COMPLETE IMAGE - NO CROPPING */
+
+.ot-school-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: top center;
+
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+
+/* =====================================================
+   LARGE ROUND LOGO
+===================================================== */
+
+.ot-floating-logo {
+    position: absolute;
+    z-index: 5;
+
+    left: -32px;
+    top: 35px;
+
+    width: 112px;
+    height: 112px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    border: 3px solid #b18a4e;
+    border-radius: 50%;
+}
+
+.ot-floating-logo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   IMAGE BOTTOM CONTENT
+===================================================== */
+
+.ot-image-bottom {
+    position: absolute;
+    z-index: 4;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    min-height: 105px;
+    padding: 17px 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(
+        to top,
+        rgba(255,255,255,.98),
+        rgba(255,255,255,.92)
+    );
+
+    border-bottom: 3px solid #b18a4e;
+}
+
+.ot-image-small-title {
+    color: #98713d;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.ot-image-bottom h3 {
+    color: #21432d;
+    font-size: 24px;
+    font-weight: 800;
+    margin: 5px 0 2px;
+}
+
+.ot-image-bottom p {
+    color: #333a30;
+    font-size: 13px;
+    margin: 0;
+}
+
+.ot-image-arrow {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #245331;
+    color: #fff;
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   BOTTOM LABEL
+===================================================== */
+
+.ot-visual-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 23px;
+
+    color: #53604b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.ot-bottom-line {
+    width: 35px;
+    height: 1px;
+    background: #b18a4e;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .ot-hero-banner {
+        padding: 65px 0;
+    }
+
+    .ot-hero-container {
+        width: 92%;
+        gap: 35px;
+    }
+
+    .ot-hero-content h1 {
+        font-size: 43px;
+    }
+
+    .ot-image-frame {
+        height: 380px;
+    }
+
+    .ot-floating-logo {
+        width: 90px;
+        height: 90px;
+        left: -20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .ot-hero-banner {
+        padding: 48px 0 42px;
+    }
+
+    .ot-hero-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .ot-hero-content {
+        text-align: center;
+    }
+
+    .ot-hero-label {
+        justify-content: center;
+        font-size: 11px;
+        letter-spacing: 1.4px;
+        margin-bottom: 18px;
+    }
+
+    .ot-hero-content h1 {
+        font-size: clamp(34px, 8vw, 44px);
+        line-height: 1.2;
+        letter-spacing: -.7px;
+        margin-bottom: 19px;
+    }
+
+    .ot-hero-content p {
+        max-width: 550px;
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 0 auto 25px;
+    }
+
+    .ot-hero-buttons {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .ot-btn-primary,
+    .ot-btn-secondary {
+        min-height: 46px;
+        padding: 0 17px;
+        font-size: 13px;
+    }
+
+    .ot-hero-highlight {
+        justify-content: center;
+        margin-top: 24px;
+        font-size: 11px;
+    }
+
+    /* RIGHT IMAGE */
+
+    .ot-hero-visual {
+        width: 100%;
+        max-width: 540px;
+        margin: auto;
+        padding: 0 9px;
+    }
+
+    .ot-image-frame {
+        height: 350px;
+    }
+
+    .ot-floating-logo {
+        width: 82px;
+        height: 82px;
+        left: -8px;
+        top: 22px;
+        padding: 8px;
+    }
+
+    .ot-image-bottom {
+        min-height: 90px;
+        padding: 13px 16px;
+    }
+
+    .ot-image-bottom h3 {
+        font-size: 21px;
+    }
+
+    .ot-image-bottom p {
+        font-size: 12px;
+    }
+
+    .ot-image-arrow {
+        width: 37px;
+        height: 37px;
+        font-size: 19px;
+    }
+
+    .ot-visual-top {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .ot-visual-bottom {
+        margin-top: 20px;
+        font-size: 9px;
+        gap: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .ot-hero-container {
+        width: 88%;
+    }
+
+    .ot-hero-content h1 {
+        font-size: 33px;
+    }
+
+    .ot-hero-content p {
+        font-size: 14px;
+    }
+
+    .ot-image-frame {
+        height: 285px;
+    }
+
+    .ot-floating-logo {
+        width: 72px;
+        height: 72px;
+        left: -5px;
+        top: 18px;
+    }
+
+    .ot-image-bottom {
+        min-height: 82px;
+        padding: 11px 13px;
+    }
+
+    .ot-image-bottom h3 {
+        font-size: 19px;
+    }
+
+    .ot-image-small-title {
+        font-size: 9px;
+    }
+
+    .ot-image-arrow {
+        width: 33px;
+        height: 33px;
+    }
+
+}
+
+
+/* =====================================================
+   EXTRA SMALL MOBILE
+===================================================== */
+
+@media (max-width: 350px) {
+
+    .ot-hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .ot-btn-primary,
+    .ot-btn-secondary {
+        width: 100%;
+    }
+
+    .ot-image-frame {
+        height: 250px;
+    }
+
+    .ot-floating-logo {
+        width: 63px;
+        height: 63px;
+    }
+
 }
